@@ -66,13 +66,21 @@ export default function PDFUploadPage() {
     if (file) {
       if (file.type === 'application/pdf') {
         if (file.size > 15 * 1024 * 1024) {
-             setUploadResult({ success: false, message: 'File is too large. Maximum size is 15MB.', error: 'File is too large. Maximum size is 15MB.' });
+             setUploadResult({ 
+               success: false, 
+               message: 'File is too large. Maximum size is 15MB.', 
+               error: 'File is too large. Maximum size is 15MB.' 
+             });
              setSelectedFile(null);
         } else {
             setSelectedFile(file);
         }
       } else {
-        setUploadResult({ success: false, message: 'Invalid file type. Please select a PDF.', error: 'Invalid file type. Please select a PDF.' });
+        setUploadResult({ 
+          success: false, 
+          message: 'Invalid file type. Please select a PDF.', 
+          error: 'Invalid file type. Please select a PDF.' 
+        });
         setSelectedFile(null);
       }
     }

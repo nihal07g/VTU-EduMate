@@ -19,7 +19,7 @@ export interface SyllabusStats {
 
 export function getAvailableSubjects(scheme: string, semester: string, branch: string): Subject[] {
   try {
-    const subjects = syllabusData[scheme]?.[branch]?.[semester];
+    const subjects = (syllabusData as any)[scheme]?.[branch]?.[semester];
     
     if (!subjects) {
       console.log(`No subjects found for ${scheme} scheme, ${branch} branch, semester ${semester}`);
@@ -43,7 +43,7 @@ export function getAvailableSubjects(scheme: string, semester: string, branch: s
 
 export function getAllAvailableBranches(scheme: string): string[] {
   try {
-    const branches = Object.keys(syllabusData[scheme] || {});
+    const branches = Object.keys((syllabusData as any)[scheme] || {});
     return branches.sort();
   } catch (error) {
     console.error('Error getting branches:', error);
@@ -53,7 +53,7 @@ export function getAllAvailableBranches(scheme: string): string[] {
 
 export function getAllAvailableSemesters(scheme: string, branch: string): string[] {
   try {
-    const semesters = Object.keys(syllabusData[scheme]?.[branch] || {});
+    const semesters = Object.keys((syllabusData as any)[scheme]?.[branch] || {});
     return semesters.sort((a, b) => parseInt(a) - parseInt(b));
   } catch (error) {
     console.error('Error getting semesters:', error);

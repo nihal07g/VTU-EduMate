@@ -157,7 +157,7 @@ export default function VTUEduMate() {
     } finally {
       setLoading(false);
     }
-  }, [question, scheme, semester, branch, selectedSubject, availableSubjects]);
+  }, [question, scheme, semester, branch, selectedSubject, availableSubjects, validateSelections]);
 
   const handleMarksAdjustment = useCallback(async (marks: number) => {
     if (!answer || loading || !currentPrompt) return;

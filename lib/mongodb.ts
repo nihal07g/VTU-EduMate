@@ -2,8 +2,8 @@ import { MongoClient, Db } from 'mongodb';
 
 const uri = "mongodb+srv://nihagb80:2noAp34s9kwXiAT8@cluster0.bhceamq.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
 const options = {
-  ssl: true,
-  sslValidate: true,
+  tls: true,
+  tlsAllowInvalidCertificates: false,
   serverSelectionTimeoutMS: 30000,
   connectTimeoutMS: 30000,
   socketTimeoutMS: 30000,

@@ -72,7 +72,7 @@ export default function VTUResourcesPage() {
 
   useEffect(() => {
     fetchResources();
-  }, [scheme, semester, branch]);
+  }, [scheme, semester, branch, fetchResources]);
 
   const handleDownload = async (fileId: string, filename: string) => {
     setDownloading(fileId);
