@@ -51,7 +51,14 @@ async function retryWithBackoff<T>(
 export async function generateVTUAnswer(prompt: string): Promise<string> {
   const apiKey = process.env.GEMINI_API_KEY;
   
+  console.log('🔍 Environment check:', {
+    hasApiKey: !!apiKey,
+    keyLength: apiKey ? apiKey.length : 0,
+    nodeEnv: process.env.NODE_ENV
+  });
+  
   if (!apiKey) {
+    console.error('❌ GEMINI_API_KEY not found in environment variables');
     throw new Error('GEMINI_API_KEY environment variable is required');
   }
 
