@@ -66,13 +66,13 @@ export default function PDFUploadPage() {
     if (file) {
       if (file.type === 'application/pdf') {
         if (file.size > 15 * 1024 * 1024) {
-             setUploadResult({ success: false, error: 'File is too large. Maximum size is 15MB.' });
+             setUploadResult({ success: false, message: 'File is too large. Maximum size is 15MB.', error: 'File is too large. Maximum size is 15MB.' });
              setSelectedFile(null);
         } else {
             setSelectedFile(file);
         }
       } else {
-        setUploadResult({ success: false, error: 'Invalid file type. Please select a PDF.' });
+        setUploadResult({ success: false, message: 'Invalid file type. Please select a PDF.', error: 'Invalid file type. Please select a PDF.' });
         setSelectedFile(null);
       }
     }
@@ -84,6 +84,7 @@ export default function PDFUploadPage() {
     if (!selectedFile || !scheme || !semester || !branch || !subject) {
       setUploadResult({
         success: false,
+        message: 'Please fill all required fields and select a PDF file',
         error: 'Please fill all required fields and select a PDF file'
       });
       return;
@@ -128,12 +129,14 @@ export default function PDFUploadPage() {
       } else {
         setUploadResult({
           success: false,
+          message: result.error || 'Upload failed',
           error: result.error || 'Upload failed'
         });
       }
     } catch (error) {
       setUploadResult({
         success: false,
+        message: 'Network error. Please check connection and try again.',
         error: 'Network error. Please check connection and try again.'
       });
     } finally {
