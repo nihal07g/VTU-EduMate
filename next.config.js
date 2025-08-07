@@ -25,7 +25,7 @@ const nextConfig = {
       // Replace environment variables at build time
       config.plugins.push(
         new webpack.DefinePlugin({
-          'process.env.GEMINI_API_KEY': JSON.stringify(process.env.GEMINI_API_KEY)
+          'process.env.NEXT_PUBLIC_GEMINI_API_KEY': JSON.stringify(process.env.NEXT_PUBLIC_GEMINI_API_KEY)
         })
       );
     }

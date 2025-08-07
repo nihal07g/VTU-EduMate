@@ -49,12 +49,15 @@ async function retryWithBackoff<T>(
 }
 
 export async function generateVTUAnswer(prompt: string): Promise<string> {
-  const apiKey = process.env.GEMINI_API_KEY;
+  // Try both public and private environment variables for compatibility
+  const apiKey = process.env.NEXT_PUBLIC_GEMINI_API_KEY || process.env.GEMINI_API_KEY;
   
   console.log('🔍 Environment check:', {
     hasApiKey: !!apiKey,
     keyLength: apiKey ? apiKey.length : 0,
-    nodeEnv: process.env.NODE_ENV
+    nodeEnv: process.env.NODE_ENV,
+    publicKeyExists: !!process.env.NEXT_PUBLIC_GEMINI_API_KEY,
+    privateKeyExists: !!process.env.GEMINI_API_KEY
   });
   
   if (!apiKey) {

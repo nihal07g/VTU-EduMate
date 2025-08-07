@@ -7,7 +7,7 @@ interface ApiTestResult {
 }
 
 export async function testGeminiAPI(): Promise<ApiTestResult> {
-  const apiKey = process.env.GEMINI_API_KEY;
+  const apiKey = process.env.NEXT_PUBLIC_GEMINI_API_KEY || process.env.GEMINI_API_KEY;
   const startTime = Date.now();
   
   console.log('🧪 Testing Gemini API connectivity...');
