@@ -4,9 +4,9 @@ import { Providers } from '@/components/providers'
 
 const inter = Inter({ subsets: ['latin'] })
 
-export const metadata = {
-  title: 'VTU EduMate - AI-Powered VTU Study Assistant',
-  description: 'Custom GPT model trained on VTU syllabus with machine learning-based question processing and intelligent recommendations',
+export const metadata: Metadata = {
+  title: 'VTU EduMate - AI-Powered Learning Assistant',
+  description: 'AI-powered educational assistant for VTU students with intelligent study support',
 }
 
 export default function RootLayout({
