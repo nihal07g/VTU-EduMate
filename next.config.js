@@ -10,6 +10,9 @@ const nextConfig = {
   trailingSlash: true,
   images: {
     unoptimized: true
+  },
+  env: {
+    GEMINI_API_KEY: process.env.GEMINI_API_KEY,
   }
 }
 
