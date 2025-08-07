@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react';
-import { runGeminiDiagnostics } from '../actions';
+import { runGeminiDiagnostics } from '../../lib/client-actions';
 
 export default function DiagnosticsPage() {
   const [report, setReport] = useState<any>(null);

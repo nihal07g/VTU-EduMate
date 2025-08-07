@@ -2,7 +2,7 @@
 
 import React, { useState, useCallback, useEffect } from 'react';
 import dynamic from 'next/dynamic';
-import { getAiResponse, getMarkedAnswer } from '../actions';
+import { getAiResponse, getMarkedAnswer } from '../../lib/client-actions';
 import { 
   getAvailableSubjects, 
   getAllAvailableBranches, 
@@ -142,8 +142,8 @@ export default function VTUEduMate() {
       
       if (response.success) {
         setAnswer(response.answer);
-        setMlAnalysis(response.mlAnalysis || null);
-        setVideoRecommendations(response.videoRecommendations || []);
+        setMlAnalysis(null); // ML analysis not available in static deployment
+        setVideoRecommendations([]); // Video recommendations not available in static deployment
         if (response.prompt) {
           setCurrentPrompt(response.prompt);
         }
