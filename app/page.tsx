@@ -14,8 +14,12 @@ export default function HomePage() {
       <header className="sticky top-0 z-50 w-full bg-white/80 dark:bg-gray-900/80 backdrop-blur-md border-b border-gray-200 dark:border-gray-800">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-20">
           <div className="flex items-center space-x-4">
-            <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-xl shadow-lg">
-              <span className="text-2xl font-bold text-white">🎓</span>
+            <div className="flex items-center justify-center w-12 h-12 rounded-full overflow-hidden shadow-lg">
+              <img 
+                src="/logo.png" 
+                alt="VTU EduMate Logo" 
+                className="w-12 h-12 object-cover"
+              />
             </div>
             <div>
               <h1 className="text-xl font-bold tracking-tight">

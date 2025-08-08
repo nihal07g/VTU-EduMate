@@ -17,8 +17,16 @@ export function ModeSelector() {
     <div className="max-w-md mx-auto my-8 p-2 bg-gray-100 dark:bg-gray-800/60 rounded-xl flex items-center space-x-2 border border-gray-200 dark:border-gray-700">
         <Link href="/edumate" className={`${baseClasses} ${currentMode === 'edumate' ? activeClasses : inactiveClasses}`}>
             <div>
-              <span className="block text-xl">🎓</span>
-              <span className="block mt-1 text-sm">VTU EduMate</span>
+              <div className="flex justify-center mb-1">
+                <div className="w-8 h-8 rounded-full overflow-hidden shadow-lg">
+                  <img 
+                    src="/logo.png" 
+                    alt="VTU EduMate Logo" 
+                    className="w-8 h-8 object-cover"
+                  />
+                </div>
+              </div>
+              <span className="block text-sm">VTU EduMate</span>
             </div>
         </Link>
         <Link href="/resources" className={`${baseClasses} ${currentMode === 'resources' ? activeClasses : inactiveClasses}`}>

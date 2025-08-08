@@ -188,8 +188,12 @@ export default function VTUEduMate() {
     return (
       <div className="flex items-center justify-center min-h-screen bg-gradient-to-br from-blue-50 via-white to-indigo-50 dark:from-gray-900 dark:via-gray-800 dark:to-indigo-900">
         <div className="text-center">
-          <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl flex items-center justify-center animate-pulse">
-            <span className="text-2xl font-bold text-white">V</span>
+          <div className="w-16 h-16 mx-auto mb-4 rounded-full overflow-hidden shadow-lg animate-pulse">
+            <img 
+              src="/logo.png" 
+              alt="VTU EduMate Logo" 
+              className="w-16 h-16 object-cover"
+            />
           </div>
           <div className="text-2xl font-bold text-gray-800 dark:text-gray-200">
             Loading VTU EduMate...
@@ -205,8 +209,12 @@ export default function VTUEduMate() {
       <header className="sticky top-0 z-50 w-full bg-white/80 dark:bg-gray-900/80 backdrop-blur-xl border-b border-gray-200/50 dark:border-gray-800/50">
         <div className="max-w-7xl mx-auto px-6 flex items-center justify-between h-16">
           <div className="flex items-center space-x-3">
-            <div className="flex items-center justify-center w-10 h-10 bg-gradient-to-br from-blue-600 to-indigo-700 rounded-xl">
-              <span className="text-xl font-bold text-white">V</span>
+            <div className="flex items-center justify-center w-10 h-10 rounded-full overflow-hidden shadow-lg">
+              <img 
+                src="/logo.png" 
+                alt="VTU EduMate Logo" 
+                className="w-10 h-10 object-cover"
+              />
             </div>
             <div>
               <h1 className="text-xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
@@ -421,8 +429,12 @@ export default function VTUEduMate() {
                 <div className="bg-gradient-to-r from-green-50 to-emerald-50 dark:from-green-900/20 dark:to-emerald-900/20 rounded-xl border border-green-200/50 dark:border-green-700/50">
                   <div className="p-4 border-b border-green-200/50 dark:border-green-700/50 flex items-center justify-between">
                     <div className="flex items-center gap-3">
-                      <div className="w-10 h-10 bg-gradient-to-br from-green-500 to-emerald-500 rounded-xl flex items-center justify-center">
-                        <span className="text-xl font-bold text-white">V</span>
+                      <div className="w-10 h-10 rounded-full overflow-hidden shadow-lg">
+                        <img 
+                          src="/logo.png" 
+                          alt="VTU EduMate Logo" 
+                          className="w-10 h-10 object-cover"
+                        />
                       </div>
                       <div>
                         <h3 className="font-bold text-green-800 dark:text-green-200">VTU EduMate Answer</h3>

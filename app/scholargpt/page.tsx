@@ -176,8 +176,12 @@ export default function VTUEduMate() {
     return (
       <div className="flex items-center justify-center min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50 dark:from-gray-900 dark:via-gray-800 dark:to-purple-900">
         <div className="text-center">
-          <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl flex items-center justify-center animate-pulse">
-            <span className="text-2xl font-bold text-white">E</span>
+          <div className="w-16 h-16 mx-auto mb-4 rounded-full overflow-hidden shadow-lg animate-pulse">
+            <img 
+              src="/logo.png" 
+              alt="VTU EduMate Logo" 
+              className="w-16 h-16 object-cover"
+            />
           </div>
           <div className="text-2xl font-bold text-gray-800 dark:text-gray-200">
             Loading VTU EduMate...
@@ -194,8 +198,12 @@ export default function VTUEduMate() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
             <div className="flex items-center space-x-3">
-              <div className="w-10 h-10 bg-gradient-to-br from-blue-600 to-indigo-600 rounded-xl flex items-center justify-center shadow-lg">
-                <span className="text-xl font-bold text-white">E</span>
+              <div className="w-10 h-10 rounded-full overflow-hidden shadow-lg">
+                <img 
+                  src="/logo.png" 
+                  alt="VTU EduMate Logo" 
+                  className="w-10 h-10 object-cover"
+                />
               </div>
               <div>
                 <h1 className="text-xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
@@ -451,8 +459,12 @@ export default function VTUEduMate() {
                     <div className="px-4 py-3 bg-emerald-100/50 dark:bg-emerald-900/30 border-b border-emerald-200/50 dark:border-emerald-700/50">
                       <div className="flex items-center justify-between">
                         <div className="flex items-center space-x-3">
-                          <div className="w-8 h-8 bg-gradient-to-br from-emerald-500 to-green-500 rounded-lg flex items-center justify-center">
-                            <span className="text-white text-sm font-bold">E</span>
+                          <div className="w-8 h-8 rounded-full overflow-hidden shadow-lg">
+                            <img 
+                              src="/logo.png" 
+                              alt="VTU EduMate Logo" 
+                              className="w-8 h-8 object-cover"
+                            />
                           </div>
                           <div>
                             <h4 className="font-semibold text-emerald-800 dark:text-emerald-200">VTU EduMate Response</h4>
@@ -552,8 +564,12 @@ export default function VTUEduMate() {
       <footer className="text-center py-8 mt-16 border-t border-slate-200/50 dark:border-slate-700/50 bg-white/50 dark:bg-slate-900/50 backdrop-blur-xl">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-center space-x-2 mb-2">
-            <div className="w-6 h-6 bg-gradient-to-br from-blue-600 to-indigo-600 rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-xs">E</span>
+            <div className="w-6 h-6 rounded-full overflow-hidden shadow-lg">
+              <img 
+                src="/logo.png" 
+                alt="VTU EduMate Logo" 
+                className="w-6 h-6 object-cover"
+              />
             </div>
             <span className="text-lg font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
               VTU EduMate
