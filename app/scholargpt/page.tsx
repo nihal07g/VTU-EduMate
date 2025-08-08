@@ -131,7 +131,7 @@ export default function VTUEduMate() {
       if (response.success) {
         setAnswer(response.answer);
         setMlAnalysis(null); // ML analysis not available in static deployment
-        setVideoRecommendations([]); // Video recommendations not available in static deployment
+        setVideoRecommendations(response.videoRecommendations || []); // Set video recommendations from response
         if (response.prompt) {
           setCurrentPrompt(response.prompt);
         }

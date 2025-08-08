@@ -2,9 +2,17 @@
 // This replaces server actions for static export
 
 import { smartGeminiClient } from '../lib/smart-gemini-client';
-import { generateVTUAnswer } from '../lib/gemini-2-flash';
+import { generateVTUAnswer, generateVideoRecommendations } from '../lib/gemini-2-flash';
 import { testGeminiAPI } from '../lib/gemini-diagnostics';
 import { formatChatGPTStyle, formatMarksSpecific } from '../lib/answer-formatter';
+
+interface VideoRecommendation {
+  title: string;
+  url: string;
+  channel: string;
+  duration: string;
+  relevance: number;
+}
 
 export async function getAiResponse(
   question: string, 
@@ -64,9 +72,25 @@ Please provide a comprehensive answer following VTU examination standards with p
       branch
     );
 
+    // Generate video recommendations
+    let videoRecommendations: VideoRecommendation[] = [];
+    try {
+      videoRecommendations = await generateVideoRecommendations(
+        question,
+        subjectName,
+        branch,
+        semester
+      );
+      console.log('🎥 Generated video recommendations:', videoRecommendations.length);
+    } catch (videoError) {
+      console.warn('⚠️ Video recommendations failed:', videoError);
+      // Continue without video recommendations
+    }
+
     return {
       success: true,
       answer: enhancedAnswer,
+      videoRecommendations: videoRecommendations,
       prompt: prompt,
       subject: subjectName,
       subjectCode: subjectCode,
