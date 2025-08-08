@@ -68,13 +68,13 @@ export default function HomePage() {
             </div>
           </Link>
 
-          {/* Scholar GPT */}
+          {/* EduMate GPT */}
           <Link href="/scholargpt" className="group">
             <div className="bg-gray-50/50 dark:bg-gray-800/50 rounded-2xl p-8 shadow-lg border border-gray-200 dark:border-gray-700 hover:shadow-xl transition-all duration-300 group-hover:scale-105">
               <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-xl shadow-lg mb-6">
                 <span className="text-3xl">📚</span>
               </div>
-              <h3 className="text-2xl font-bold mb-4">Scholar GPT</h3>
+              <h3 className="text-2xl font-bold mb-4">EduMate GPT</h3>
               <p className="text-gray-600 dark:text-gray-400 mb-6">
                 Advanced AI model for detailed academic explanations and research assistance.
               </p>
