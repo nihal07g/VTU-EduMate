@@ -209,7 +209,7 @@ export default function VTUEduMate() {
                 <h1 className="text-xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
                   VTU EduMate
                 </h1>
-                <p className="text-xs text-slate-500 dark:text-slate-400">AI Scholar Assistant</p>
+                <p className="text-xs text-slate-500 dark:text-slate-400">EduMate GPT</p>
               </div>
             </div>
             
