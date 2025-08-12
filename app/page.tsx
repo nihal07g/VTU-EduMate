@@ -73,7 +73,7 @@ export default function HomePage() {
           </Link>
 
           {/* EduMate GPT */}
-          <Link href="/scholargpt" className="group">
+          <Link href="/edumate" className="group">
             <div className="bg-gray-50/50 dark:bg-gray-800/50 rounded-2xl p-8 shadow-lg border border-gray-200 dark:border-gray-700 hover:shadow-xl transition-all duration-300 group-hover:scale-105">
               <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-xl shadow-lg mb-6">
                 <span className="text-3xl">📚</span>
