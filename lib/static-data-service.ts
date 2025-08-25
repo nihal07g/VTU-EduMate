@@ -15,10 +15,46 @@ export interface ResourceItem {
   uploadDate: string;
   downloadCount: number;
   tags: string[];
+  googleDriveUrl?: string; // Add Google Drive integration
+  previewUrl?: string;    // Add preview URL
 }
 
-// Mock data for demonstration
+// Mock data with Cloud Computing notes as the first resource
 const mockResources: ResourceItem[] = [
+  {
+    _id: 'cc-6th-sem-2022',
+    filename: 'cloud-computing-bcs601.pdf',
+    originalName: 'Cloud Computing Complete Notes.pdf',
+    scheme: '2022',
+    semester: '6',
+    branch: 'CSE', // Computer Science Engineering
+    subject: 'Cloud Computing',
+    subjectCode: 'BCS601',
+    description: 'Comprehensive Cloud Computing notes for 6th semester 2022 scheme. Covers all modules including Cloud Computing fundamentals, virtualization, service models (IaaS, PaaS, SaaS), deployment models, security, and emerging trends.',
+    fileSize: 5242880, // Approximately 5MB
+    uploadDate: '2025-08-25T10:30:00Z',
+    downloadCount: 0, // New upload
+    tags: ['cloud-computing', 'virtualization', 'aws', 'azure', 'saas', 'paas', 'iaas', '6th-semester'],
+    googleDriveUrl: 'https://drive.google.com/file/d/1ZGoHvPlZGuxl4wxQ55Ch2Z8JwSfzVVZZ/view?usp=sharing',
+    previewUrl: 'https://drive.google.com/file/d/1ZGoHvPlZGuxl4wxQ55Ch2Z8JwSfzVVZZ/preview'
+  },
+  {
+    _id: 'cc-6th-sem-2022-ise',
+    filename: 'cloud-computing-bcs601-ise.pdf',
+    originalName: 'Cloud Computing Complete Notes.pdf',
+    scheme: '2022',
+    semester: '6',
+    branch: 'ISE', // Information Science Engineering (same notes for ISE)
+    subject: 'Cloud Computing',
+    subjectCode: 'BCS601',
+    description: 'Comprehensive Cloud Computing notes for 6th semester 2022 scheme. Covers all modules including Cloud Computing fundamentals, virtualization, service models (IaaS, PaaS, SaaS), deployment models, security, and emerging trends.',
+    fileSize: 5242880,
+    uploadDate: '2025-08-25T10:30:00Z',
+    downloadCount: 0,
+    tags: ['cloud-computing', 'virtualization', 'aws', 'azure', 'saas', 'paas', 'iaas', '6th-semester'],
+    googleDriveUrl: 'https://drive.google.com/file/d/1ZGoHvPlZGuxl4wxQ55Ch2Z8JwSfzVVZZ/view?usp=sharing',
+    previewUrl: 'https://drive.google.com/file/d/1ZGoHvPlZGuxl4wxQ55Ch2Z8JwSfzVVZZ/preview'
+  },
   {
     _id: '1',
     filename: 'sample-notes.pdf',
@@ -87,12 +123,29 @@ export async function uploadResource(data: FormData): Promise<{ success: boolean
   };
 }
 
-export async function downloadResource(id: string): Promise<{ success: boolean; message: string }> {
-  // Simulate download for static deployment
-  await new Promise(resolve => setTimeout(resolve, 500));
+export async function downloadResource(id: string): Promise<{ success: boolean; message: string; url?: string }> {
+  // Find the resource
+  const resource = mockResources.find(r => r._id === id);
+  
+  if (resource && resource.googleDriveUrl) {
+    // Convert Google Drive view URL to download URL
+    const fileId = resource.googleDriveUrl.match(/\/file\/d\/([a-zA-Z0-9-_]+)/)?.[1];
+    if (fileId) {
+      const downloadUrl = `https://drive.google.com/uc?export=download&id=${fileId}`;
+      
+      // Increment download count (in real app, this would be stored)
+      resource.downloadCount += 1;
+      
+      return {
+        success: true,
+        message: 'Download started',
+        url: downloadUrl
+      };
+    }
+  }
   
   return {
     success: false,
-    message: 'Download feature requires server deployment. This is a static demo.'
+    message: 'Resource not found or download not available'
   };
 }

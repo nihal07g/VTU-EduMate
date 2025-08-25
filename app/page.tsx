@@ -51,6 +51,40 @@ export default function HomePage() {
           </p>
         </div>
 
+        {/* Available Resources Banner */}
+        <div className="mt-16 max-w-4xl mx-auto">
+          <div className="bg-gradient-to-r from-green-50 to-blue-50 dark:from-green-900/20 dark:to-blue-900/20 rounded-2xl border border-green-200/50 dark:border-green-700/50 p-8 text-center">
+            <div className="flex items-center justify-center gap-3 mb-4">
+              <span className="text-3xl">🎉</span>
+              <h3 className="text-2xl font-bold text-green-800 dark:text-green-200">
+                New! Cloud Computing Notes Available
+              </h3>
+            </div>
+            <p className="text-green-700 dark:text-green-300 mb-6">
+              Comprehensive Cloud Computing notes for 6th semester 2022 scheme (CSE & ISE) are now available!
+            </p>
+            <div className="flex flex-wrap items-center justify-center gap-4 text-sm text-green-600 dark:text-green-400">
+              <span className="bg-green-100 dark:bg-green-900/30 px-3 py-1 rounded-full">
+                📚 2022 Scheme
+              </span>
+              <span className="bg-green-100 dark:bg-green-900/30 px-3 py-1 rounded-full">
+                🎓 6th Semester
+              </span>
+              <span className="bg-green-100 dark:bg-green-900/30 px-3 py-1 rounded-full">
+                ⚙️ CSE & ISE
+              </span>
+              <span className="bg-green-100 dark:bg-green-900/30 px-3 py-1 rounded-full">
+                ☁️ Cloud Computing
+              </span>
+            </div>
+            <Link href="/resources" passHref>
+              <button className="mt-6 px-8 py-3 bg-gradient-to-r from-green-600 to-emerald-600 text-white font-bold rounded-xl shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-300">
+                📥 Download Now
+              </button>
+            </Link>
+          </div>
+        </div>
+
         {/* Features Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-16">
           {/* VTU EduMate */}
