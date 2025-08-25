@@ -2,6 +2,7 @@
 
 import React, { useState, useCallback, useEffect } from 'react';
 import dynamic from 'next/dynamic';
+import Image from 'next/image';
 import { getAiResponse, getMarkedAnswer } from '../../lib/client-actions';
 import { 
   getAvailableSubjects, 
@@ -106,7 +107,11 @@ export default function VTUEduMate() {
     { value: '2022', label: '2022 Scheme' }
   ];
 
-  const validateSelections = () => {
+  const handleSubmit = useCallback(async () => {
+    setError('');
+    setShowMarksOptions(false);
+    
+    // Validate selections
     const errors = [];
     if (!scheme) errors.push('Please select a VTU scheme');
     if (!branch) errors.push('Please select your engineering branch');
@@ -116,16 +121,8 @@ export default function VTUEduMate() {
     
     if (errors.length > 0) {
       setError(errors.join('. '));
-      return false;
+      return;
     }
-    return true;
-  };
-
-  const handleSubmit = useCallback(async () => {
-    setError('');
-    setShowMarksOptions(false);
-    
-    if (!validateSelections()) return;
     
     const selectedSubjectData = availableSubjects.find(s => s.code === selectedSubject);
     setLoading(true);
@@ -157,7 +154,7 @@ export default function VTUEduMate() {
     } finally {
       setLoading(false);
     }
-  }, [question, scheme, semester, branch, selectedSubject, availableSubjects, validateSelections]);
+  }, [question, scheme, semester, branch, selectedSubject, availableSubjects]);
 
   const handleMarksAdjustment = useCallback(async (marks: number) => {
     if (!answer || loading || !currentPrompt) return;
@@ -189,9 +186,11 @@ export default function VTUEduMate() {
       <div className="flex items-center justify-center min-h-screen bg-gradient-to-br from-blue-50 via-white to-indigo-50 dark:from-gray-900 dark:via-gray-800 dark:to-indigo-900">
         <div className="text-center">
           <div className="w-16 h-16 mx-auto mb-4 rounded-full overflow-hidden shadow-lg animate-pulse">
-            <img 
+            <Image 
               src="/logo.png" 
               alt="VTU EduMate Logo" 
+              width={64}
+              height={64}
               className="w-16 h-16 object-cover"
             />
           </div>
@@ -210,9 +209,11 @@ export default function VTUEduMate() {
         <div className="max-w-7xl mx-auto px-6 flex items-center justify-between h-16">
           <div className="flex items-center space-x-3">
             <div className="flex items-center justify-center w-10 h-10 rounded-full overflow-hidden shadow-lg">
-              <img 
+              <Image 
                 src="/logo.png" 
                 alt="VTU EduMate Logo" 
+                width={40}
+                height={40}
                 className="w-10 h-10 object-cover"
               />
             </div>
@@ -430,9 +431,11 @@ export default function VTUEduMate() {
                   <div className="p-4 border-b border-green-200/50 dark:border-green-700/50 flex items-center justify-between">
                     <div className="flex items-center gap-3">
                       <div className="w-10 h-10 rounded-full overflow-hidden shadow-lg">
-                        <img 
+                        <Image 
                           src="/logo.png" 
                           alt="VTU EduMate Logo" 
+                          width={40}
+                          height={40}
                           className="w-10 h-10 object-cover"
                         />
                       </div>

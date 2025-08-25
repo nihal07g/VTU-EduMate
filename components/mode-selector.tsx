@@ -1,6 +1,7 @@
 'use client'
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 
 export type AppMode = 'edumate' | 'resources';
@@ -19,9 +20,11 @@ export function ModeSelector() {
             <div>
               <div className="flex justify-center mb-1">
                 <div className="w-8 h-8 rounded-full overflow-hidden shadow-lg">
-                  <img 
+                  <Image 
                     src="/logo.png" 
                     alt="VTU EduMate Logo" 
+                    width={32}
+                    height={32}
                     className="w-8 h-8 object-cover"
                   />
                 </div>

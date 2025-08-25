@@ -2,6 +2,7 @@
 
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { ModeSelector } from '../components/mode-selector';
 import dynamic from 'next/dynamic';
 
@@ -15,9 +16,11 @@ export default function HomePage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-20">
           <div className="flex items-center space-x-4">
             <div className="flex items-center justify-center w-12 h-12 rounded-full overflow-hidden shadow-lg">
-              <img 
+              <Image 
                 src="/logo.png" 
                 alt="VTU EduMate Logo" 
+                width={48}
+                height={48}
                 className="w-12 h-12 object-cover"
               />
             </div>
