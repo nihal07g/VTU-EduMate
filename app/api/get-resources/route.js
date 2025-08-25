@@ -1,7 +1,7 @@
-import { NextRequest, NextResponse } from 'next/server';
+import { NextResponse } from 'next/server';
 import { connectToDatabase } from '../../../lib/mongodb';
 
-export async function GET(request: NextRequest) {
+export async function GET(request) {
   try {
     const { searchParams } = new URL(request.url);
     const scheme = searchParams.get('scheme');
@@ -14,7 +14,7 @@ export async function GET(request: NextRequest) {
     const { db } = await connectToDatabase();
 
     // Build filter
-    const filter: any = {};
+    const filter = {};
     if (scheme) filter.scheme = scheme;
     if (semester) filter.semester = semester;  
     if (branch) filter.branch = branch;

@@ -4,11 +4,9 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 
-export type AppMode = 'edumate' | 'resources';
-
 export function ModeSelector() {
   const pathname = usePathname();
-  const currentMode: AppMode = pathname.startsWith('/resources') ? 'resources' : 'edumate';
+  const currentMode = pathname.startsWith('/resources') ? 'resources' : 'edumate';
 
   const baseClasses = "flex-1 text-center px-6 py-4 rounded-lg font-bold text-lg transition-all duration-300";
   const activeClasses = "bg-white dark:bg-gray-800 shadow-lg text-indigo-600 dark:text-indigo-300";

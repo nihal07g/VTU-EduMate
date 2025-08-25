@@ -1,32 +1,34 @@
 import syllabusData from '../data/syllabus/vtu_syllabus.json';
 
-export interface Subject {
-  name: string;
-  code: string;
-  credits: number;
-  description: string;
-  modules: string[];
-  keywords: string[];
-  scheme: string;
-}
+// Subject structure:
+// {
+//   name: string,
+//   code: string,
+//   credits: number,
+//   description: string,
+//   modules: string[],
+//   keywords: string[],
+//   scheme: string
+// }
 
-export interface SyllabusStats {
-  totalSubjects: number;
-  totalCredits: number;
-  moduleCount: number;
-  schemeYear: string;
-}
+// SyllabusStats structure:
+// {
+//   totalSubjects: number,
+//   totalCredits: number,
+//   moduleCount: number,
+//   schemeYear: string
+// }
 
-export function getAvailableSubjects(scheme: string, semester: string, branch: string): Subject[] {
+export function getAvailableSubjects(scheme, semester, branch) {
   try {
-    const subjects = (syllabusData as any)[scheme]?.[branch]?.[semester];
+    const subjects = syllabusData[scheme]?.[branch]?.[semester];
     
     if (!subjects) {
       console.log(`No subjects found for ${scheme} scheme, ${branch} branch, semester ${semester}`);
       return [];
     }
     
-    return Object.entries(subjects).map(([subjectName, subjectData]: [string, any]) => ({
+    return Object.entries(subjects).map(([subjectName, subjectData]) => ({
       name: subjectName,
       code: subjectData.code,
       credits: subjectData.credits,
@@ -41,9 +43,9 @@ export function getAvailableSubjects(scheme: string, semester: string, branch: s
   }
 }
 
-export function getAllAvailableBranches(scheme: string): string[] {
+export function getAllAvailableBranches(scheme) {
   try {
-    const branches = Object.keys((syllabusData as any)[scheme] || {});
+    const branches = Object.keys(syllabusData[scheme] || {});
     return branches.sort();
   } catch (error) {
     console.error('Error getting branches:', error);
@@ -51,9 +53,9 @@ export function getAllAvailableBranches(scheme: string): string[] {
   }
 }
 
-export function getAllAvailableSemesters(scheme: string, branch: string): string[] {
+export function getAllAvailableSemesters(scheme, branch) {
   try {
-    const semesters = Object.keys((syllabusData as any)[scheme]?.[branch] || {});
+    const semesters = Object.keys(syllabusData[scheme]?.[branch] || {});
     return semesters.sort((a, b) => parseInt(a) - parseInt(b));
   } catch (error) {
     console.error('Error getting semesters:', error);
@@ -61,7 +63,7 @@ export function getAllAvailableSemesters(scheme: string, branch: string): string
   }
 }
 
-export function getSyllabusStatistics(scheme: string, semester: string, branch: string): SyllabusStats {
+export function getSyllabusStatistics(scheme, semester, branch) {
   const subjects = getAvailableSubjects(scheme, semester, branch);
   
   return {
@@ -72,8 +74,8 @@ export function getSyllabusStatistics(scheme: string, semester: string, branch: 
   };
 }
 
-export function searchSubjectsByKeyword(keyword: string, scheme: string): Subject[] {
-  const allSubjects: Subject[] = [];
+export function searchSubjectsByKeyword(keyword, scheme) {
+  const allSubjects = [];
   const branches = getAllAvailableBranches(scheme);
   
   branches.forEach(branch => {
@@ -122,7 +124,7 @@ export const COMPREHENSIVE_BRANCH_INFO = {
   }
 };
 
-export function getBranchFullName(branch: string, scheme: string): string {
+export function getBranchFullName(branch, scheme) {
   // @ts-ignore
   return COMPREHENSIVE_BRANCH_INFO[scheme]?.[branch]?.fullName || branch;
 }

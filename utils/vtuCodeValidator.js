@@ -1,5 +1,5 @@
 // Official VTU subject code patterns
-const VTU_CODE_PATTERNS: Record<string, Record<string, RegExp>> = {
+const VTU_CODE_PATTERNS = {
   "2022": {
     "CSE": /^BCS[1-8][0-9][0-9]$/,  // BCS501, BCS502, etc.
     "ECE": /^BEC[1-8][0-9][0-9]$/,  // BEC501, BEC502, etc.
@@ -18,12 +18,12 @@ const VTU_CODE_PATTERNS: Record<string, Record<string, RegExp>> = {
   }
 };
 
-export function validateVTUSubjectCode(code: string, scheme: string, branch: string): boolean {
+export function validateVTUSubjectCode(code, scheme, branch) {
   const pattern = VTU_CODE_PATTERNS[scheme]?.[branch];
   if (!pattern) return false;
   return pattern.test(code);
 }
 
-export function getOfficialVTULink(subjectCode: string): string {
+export function getOfficialVTULink(subjectCode) {
   return `https://vtucircle.com/subject/${subjectCode.toLowerCase()}/`;
 }

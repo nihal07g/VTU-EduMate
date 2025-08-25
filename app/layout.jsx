@@ -1,11 +1,10 @@
 import './globals.css'
 import { Inter } from 'next/font/google'
 import { Providers } from '@/components/providers'
-import type { Metadata } from 'next'
 
 const inter = Inter({ subsets: ['latin'] })
 
-export const metadata: Metadata = {
+export const metadata = {
   title: 'VTU EduMate - AI-Powered Learning Assistant',
   description: 'AI-powered educational assistant for VTU students with intelligent study support',
   icons: {
@@ -19,11 +18,7 @@ export const metadata: Metadata = {
   },
 }
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
+export default function RootLayout({ children }) {
   return (
     <html lang="en" suppressHydrationWarning>
       <head>

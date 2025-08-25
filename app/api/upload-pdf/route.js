@@ -1,25 +1,7 @@
-import { NextRequest, NextResponse } from 'next/server';
+import { NextResponse } from 'next/server';
 import { connectToDatabase } from '../../../lib/mongodb';
 
-interface PDFDocument {
-  _id?: any;
-  filename: string;
-  originalName: string;
-  scheme: string;
-  semester: string;
-  branch: string;
-  subject: string;
-  subjectCode: string;
-  description?: string;
-  fileSize: number;
-  uploadDate: Date;
-  downloadCount: number;
-  contentType: string;
-  tags: string[];
-  pdfData: Buffer;
-}
-
-export async function POST(request: NextRequest) {
+export async function POST(request) {
   console.log('📤 PDF Upload Request Received');
   
   try {
@@ -27,14 +9,14 @@ export async function POST(request: NextRequest) {
 
     // Parse form data
     const formData = await request.formData();
-    const file = formData.get('pdf') as File;
-    const scheme = formData.get('scheme') as string;
-    const semester = formData.get('semester') as string;
-    const branch = formData.get('branch') as string;
-    const subject = formData.get('subject') as string;
-    const subjectCode = formData.get('subjectCode') as string;
-    const description = formData.get('description') as string;
-    const tags = formData.get('tags') as string;
+    const file = formData.get('pdf');
+    const scheme = formData.get('scheme');
+    const semester = formData.get('semester');
+    const branch = formData.get('branch');
+    const subject = formData.get('subject');
+    const subjectCode = formData.get('subjectCode');
+    const description = formData.get('description');
+    const tags = formData.get('tags');
 
     // Comprehensive validation
     if (!file) {
@@ -99,7 +81,7 @@ export async function POST(request: NextRequest) {
     }
 
     // Create PDF document
-    const pdfDocument: PDFDocument = {
+    const pdfDocument = {
       filename: `${semester}_${scheme}_${branch}_${subject.replace(/\s+/g, '_')}_${Date.now()}.pdf`,
       originalName: file.name,
       scheme: scheme,
@@ -155,7 +137,7 @@ export async function POST(request: NextRequest) {
     });
 
   } catch (error) {
-    const errorMessage = (error as Error).message;
+    const errorMessage = error.message;
     console.error('❌ PDF upload error:', error);
     
     if (errorMessage.includes('SSL') || errorMessage.includes('TLS') || errorMessage.includes('timed out')) {
