@@ -1,0 +1,140 @@
+Operating Systems - Unit 2: Process Management
+
+Process management is one of the core functions of an operating system. A process is a program in execution, consisting of program code, data, and system resources allocated to it.
+
+Process States
+A process can exist in several states during its lifetime:
+- New: Process is being created
+- Ready: Process is waiting to be assigned to a processor
+- Running: Instructions are being executed
+- Waiting: Process is waiting for some event to occur
+- Terminated: Process has finished execution
+
+Process Control Block (PCB)
+Each process is represented by a Process Control Block containing:
+- Process ID (PID): Unique identifier for the process
+- Process state: Current state of the process
+- Program counter: Address of the next instruction to execute
+- CPU registers: Contents of processor registers
+- Memory management information: Base and limit registers
+- Accounting information: CPU time used, time limits
+- I/O status information: List of open files and I/O devices
+
+Process Scheduling
+Process scheduling determines which process runs at any given time. The scheduler uses various algorithms:
+
+First-Come, First-Served (FCFS)
+- Processes are executed in the order they arrive
+- Simple but can cause convoy effect
+- Average waiting time can be long
+
+Shortest Job First (SJF)
+- Process with shortest execution time runs first
+- Optimal for average waiting time
+- Requires knowledge of execution time
+
+Round Robin (RR)
+- Each process gets a fixed time quantum
+- When quantum expires, process moves to ready queue
+- Good for time-sharing systems
+- Response time is generally good
+
+Priority Scheduling
+- Each process has a priority number
+- Higher priority processes execute first
+- Can lead to starvation of low-priority processes
+- Solution: aging increases priority over time
+
+Multilevel Queue Scheduling
+- Ready queue is partitioned into separate queues
+- Each queue has its own scheduling algorithm
+- Processes are permanently assigned to queues
+- Example: system processes, interactive processes, batch processes
+
+Process Synchronization
+When multiple processes access shared resources, synchronization is required to maintain data consistency.
+
+Critical Section Problem
+- Critical section: Code segment that accesses shared variables
+- Only one process should execute in critical section at a time
+- Requirements: Mutual exclusion, progress, bounded waiting
+
+Synchronization Tools:
+
+Mutex (Mutual Exclusion)
+- Binary semaphore that allows only one process in critical section
+- Lock() and unlock() operations
+- Simple but can cause busy waiting
+
+Semaphores
+- Integer variable with two atomic operations: wait() and signal()
+- Counting semaphore: allows multiple processes
+- Binary semaphore: similar to mutex
+- Can implement various synchronization patterns
+
+Monitors
+- High-level synchronization construct
+- Encapsulates shared variables and procedures
+- Only one process can be active inside monitor
+- Condition variables for waiting and signaling
+
+Deadlock
+Deadlock occurs when processes are blocked waiting for resources held by other blocked processes.
+
+Deadlock Conditions (Coffman Conditions):
+1. Mutual Exclusion: Resources cannot be shared
+2. Hold and Wait: Process holds resources while waiting for others
+3. No Preemption: Resources cannot be forcibly removed
+4. Circular Wait: Chain of processes each waiting for next
+
+Deadlock Prevention
+- Eliminate one of the four necessary conditions
+- Mutual exclusion: Make resources shareable (not always possible)
+- Hold and wait: Require all resources before execution
+- No preemption: Allow resource preemption
+- Circular wait: Order resources and request in order
+
+Deadlock Avoidance
+- Use additional information about resource requests
+- Banker's algorithm: Check if allocation leads to safe state
+- Safe state: System can allocate resources without deadlock
+- Unsafe state: Might lead to deadlock
+
+Deadlock Detection and Recovery
+- Allow deadlocks but detect and recover
+- Detection: Use resource allocation graphs or algorithms
+- Recovery: Terminate processes or preempt resources
+
+Inter-Process Communication (IPC)
+Processes need to communicate and synchronize their actions.
+
+Message Passing
+- Direct communication: Processes name each other explicitly
+- Indirect communication: Messages sent through mailboxes/ports
+- Synchronous: Sender blocks until message received
+- Asynchronous: Sender continues execution
+
+Shared Memory
+- Processes share a region of memory
+- Faster than message passing
+- Requires synchronization to avoid race conditions
+- System calls: shmget(), shmat(), shmdt()
+
+Pipes
+- Unidirectional communication channel
+- Ordinary pipes: Parent-child communication
+- Named pipes (FIFOs): Unrelated processes can communicate
+
+Sockets
+- Communication endpoint for network communication
+- Can be used for local or remote communication
+- Stream sockets (TCP) vs Datagram sockets (UDP)
+
+CPU Scheduling Metrics
+- CPU utilization: Percentage of time CPU is busy
+- Throughput: Number of processes completed per time unit
+- Turnaround time: Time from submission to completion
+- Waiting time: Time spent waiting in ready queue
+- Response time: Time from request to first response
+
+These process management concepts are fundamental to understanding how modern operating systems efficiently manage system resources and ensure proper execution of concurrent processes.

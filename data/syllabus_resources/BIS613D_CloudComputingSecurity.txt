@@ -1,0 +1,24 @@
+BIS613D – Cloud Computing & Security (Professional Elective, ISE, 6th Semester, VTU 2022 Scheme)
+Overview: Cloud service models (IaaS/PaaS/SaaS), deployment models, virtualization, containers, orchestration, and security controls across identity, network, data, and workload layers. Compliance and shared-responsibility model.
+
+Key Topics (exam focus): Multi-tenancy risks, IAM (RBAC, least privilege), encryption (at-rest/in-transit, KMS), network segmentation (VPC, security groups), threat modeling, logging/monitoring (SIEM), incident response, cost–security trade-offs, and zero-trust principles. Typical questions include architecture diagrams with security layers and mitigation strategies.
+
+Unit 1: Cloud Models & Virtualization
+Cloud service models: Infrastructure as a Service (IaaS), Platform as a Service (PaaS), Software as a Service (SaaS). Deployment models: public, private, hybrid, community clouds. Virtualization technologies: hypervisors (Type 1 vs Type 2), virtual machines, resource allocation. Container technology: Docker, container vs VM comparison, microservices architecture.
+
+Unit 2: Networking & Storage in Cloud
+Virtual Private Cloud (VPC) concepts: subnets, routing tables, internet gateways. Network security groups and access control lists (ACLs). Load balancing: Application Load Balancer (ALB), Network Load Balancer (NLB). Content Delivery Networks (CDN) and edge computing. Cloud storage types: object storage (S3), block storage (EBS), file storage (EFS). Data replication and backup strategies.
+
+Unit 3: Identity & Access Management
+Authentication methods: passwords, multi-factor authentication (MFA), biometrics. Authorization models: Role-Based Access Control (RBAC), Attribute-Based Access Control (ABAC). Principle of least privilege and privilege escalation. Single Sign-On (SSO) and federated identity. Identity providers and SAML/OAuth2 protocols. Service accounts and API key management.
+
+Unit 4: Data Protection & Monitoring
+Encryption fundamentals: symmetric vs asymmetric encryption, key management systems (KMS). Data encryption at rest and in transit. Database encryption: transparent data encryption (TDE), column-level encryption. Security monitoring: Security Information and Event Management (SIEM), intrusion detection systems (IDS). Log aggregation and analysis. Vulnerability scanning and penetration testing.
+
+Unit 5: Compliance & Zero Trust
+Compliance frameworks: SOC 2, ISO 27001, GDPR, HIPAA. Shared responsibility model in cloud security. Zero trust architecture: "never trust, always verify" principle. Network micro-segmentation and software-defined perimeters. Incident response planning and disaster recovery. Security automation and orchestration (SOAR). Cost optimization vs security trade-offs.
+
+Sample Exam Questions:
+2-mark: Define the shared responsibility model in cloud computing.
+6-mark: Explain the difference between IaaS, PaaS, and SaaS with examples.
+10-mark: Design a secure cloud architecture for a healthcare application considering HIPAA compliance.

@@ -1,0 +1,24 @@
+BCS602 – Machine Learning (CSE/ISE, 6th Semester, VTU 2022 Scheme)
+Overview: Supervised, unsupervised, and model evaluation fundamentals. Pipeline: data cleaning, feature engineering, model selection, training/validation, and generalization. Mathematics: linear algebra intuition, loss functions, and regularization.
+
+Key Topics (exam focus): Linear/logistic regression, k-NN, Naïve Bayes, SVM (margin, kernels), decision trees/ensembles, clustering (k-means/Hierarchical), dimensionality reduction (PCA), bias–variance trade-off, cross-validation, confusion matrix, precision/recall/F1, ROC–AUC. Typical questions ask derivations of decision boundaries, confusion matrix interpretation, and pros/cons of algorithms.
+
+Unit 1: Supervised Learning
+Linear regression: cost function, gradient descent, normal equation. Logistic regression: sigmoid function, log-likelihood, decision boundary. k-Nearest Neighbors: distance metrics, curse of dimensionality, choosing k. Naïve Bayes: conditional independence assumption, Laplace smoothing, categorical vs continuous features.
+
+Unit 2: Support Vector Machines
+Maximum margin classifier concept. Hard margin vs soft margin SVM. Kernel trick: polynomial, RBF, sigmoid kernels. Support vectors identification. Dual formulation and Lagrange multipliers. SVM for non-linearly separable data. Multi-class SVM: one-vs-one, one-vs-all strategies.
+
+Unit 3: Decision Trees & Ensembles
+Information gain and Gini impurity. Tree construction algorithms: ID3, C4.5, CART. Overfitting in decision trees and pruning techniques. Random Forest: bagging, feature randomness, out-of-bag error. Boosting algorithms: AdaBoost, Gradient Boosting. Bias-variance decomposition in ensemble methods.
+
+Unit 4: Unsupervised Learning
+k-means clustering: algorithm, initialization, elbow method. Hierarchical clustering: agglomerative vs divisive, dendrograms, linkage criteria. DBSCAN: density-based clustering, core points, noise detection. Principal Component Analysis (PCA): eigenvalues, eigenvectors, dimensionality reduction, explained variance ratio.
+
+Unit 5: Model Evaluation & Selection
+Training, validation, and test sets. Cross-validation: k-fold, stratified, leave-one-out. Performance metrics: accuracy, precision, recall, F1-score, specificity. ROC curve and AUC interpretation. Confusion matrix analysis. Bias-variance trade-off. Overfitting vs underfitting detection and solutions.
+
+Sample Exam Questions:
+2-mark: Define precision and recall with formulas.
+6-mark: Explain the kernel trick in SVM with an example.
+10-mark: Compare k-means and hierarchical clustering algorithms with advantages and disadvantages.

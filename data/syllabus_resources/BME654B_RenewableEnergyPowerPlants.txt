@@ -1,0 +1,24 @@
+BME654B – Renewable Energy & Power Plants (Open Elective, 6th Semester, VTU 2022 Scheme)
+Overview: Energy resources (solar, wind, hydro, biomass, geothermal) and conventional power plant basics. Performance metrics: capacity factor, efficiency, load curve, and levelized cost of energy (LCOE). Environmental and grid integration aspects.
+
+Key Topics (exam focus): Solar PV I–V characteristics and MPPT, wind turbine power curve and Betz limit, hydro plant classification, biomass gasification, geothermal utilization, steam power plant Rankine cycle basics, emissions, storage (batteries, pumped hydro), and grid stability. Exam questions often request cycle sketches, efficiency calculations, or technology comparisons.
+
+Unit 1: Solar & Wind Energy Systems
+Solar radiation fundamentals: direct, diffuse, and global radiation. Photovoltaic cell I-V characteristics: open circuit voltage, short circuit current, fill factor. Maximum Power Point Tracking (MPPT) techniques. Solar thermal collectors: flat plate, concentrating collectors. Wind energy: wind speed distribution, power in wind, Betz limit (59.3% theoretical maximum). Wind turbine types: horizontal vs vertical axis, pitch control, yaw systems.
+
+Unit 2: Hydro & Biomass Energy
+Hydroelectric power: run-of-river, reservoir-based, pumped storage. Head and flow calculations, turbine selection (Pelton, Francis, Kaplan). Small hydro vs large hydro environmental impacts. Biomass energy sources: agricultural residues, energy crops, municipal solid waste. Biomass conversion: direct combustion, gasification, pyrolysis, anaerobic digestion. Biogas composition and purification methods.
+
+Unit 3: Geothermal & Energy Storage
+Geothermal resources: dry steam, flash steam, binary cycle systems. Ground source heat pumps. Geothermal gradient and reservoir characteristics. Energy storage technologies: batteries (Li-ion, lead-acid), pumped hydro storage, compressed air energy storage (CAES). Grid-scale vs distributed storage applications. Storage efficiency and round-trip losses.
+
+Unit 4: Conventional Power Plants
+Steam power plant: Rankine cycle, boiler, turbine, condenser, feed water heaters. Thermal efficiency calculations and heat rate. Gas turbine power plants: Brayton cycle, combined cycle efficiency improvements. Coal power plants: pulverized coal, fluidized bed combustion. Nuclear power basics: fission process, reactor types, safety systems.
+
+Unit 5: Grid Integration & Economics
+Grid stability challenges with renewable integration: intermittency, voltage regulation, frequency control. Smart grid concepts and demand response. Levelized Cost of Energy (LCOE) calculations. Capacity factor and availability factor. Environmental impact assessment: carbon footprint, lifecycle analysis. Energy policy and incentives: feed-in tariffs, renewable energy certificates.
+
+Sample Exam Questions:
+2-mark: State Betz limit and its significance in wind energy.
+6-mark: Explain the working principle of a photovoltaic cell with I-V characteristics.
+10-mark: Compare the Rankine cycle efficiency improvements in modern steam power plants.

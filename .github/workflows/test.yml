@@ -1,0 +1,179 @@
+name: VTU EduMate CI/CD
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    
+    strategy:
+      matrix:
+        node-version: [18.x, 20.x]
+        
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      
+    - name: Setup Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v4
+      with:
+        node-version: ${{ matrix.node-version }}
+        cache: 'npm'
+        
+    - name: Setup Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.9'
+        
+    - name: Install Node.js dependencies
+      run: npm ci
+      
+    - name: Install Python dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r models/requirements.txt
+        
+    - name: Run TypeScript type checking
+      run: npx tsc --noEmit
+      
+    - name: Run ESLint
+      run: npm run lint
+      
+    - name: Run tests
+      run: npm test
+      env:
+        # RAG tests use deterministic fallback embeddings when API key not set
+        # This ensures tests pass in CI without requiring external API access
+        NODE_ENV: test
+        RAG_INDEX_DRIVER: json
+        RAG_MIN_SIM: 0.1
+        
+    - name: Build application
+      run: npm run build
+      env:
+        # Ensure build succeeds without API keys
+        SKIP_ENV_VALIDATION: true
+        
+    - name: Test RAG ingestion (without API key)
+      run: |
+        # Test that ingestion script runs with fallback embeddings
+        npx ts-node scripts/ingest_rag.ts --help
+        echo "✅ RAG ingestion script validation passed"
+        
+  security:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18.x'
+        cache: 'npm'
+        
+    - name: Install dependencies
+      run: npm ci
+      
+    - name: Run security audit
+      run: npm audit --audit-level=moderate
+      
+    - name: Check for sensitive data
+      run: |
+        # Ensure no API keys are committed
+        if grep -r "sk-" . --exclude-dir=node_modules --exclude-dir=.git; then
+          echo "❌ Found potential API keys in codebase"
+          exit 1
+        fi
+        
+        if grep -r "AIza" . --exclude-dir=node_modules --exclude-dir=.git; then
+          echo "❌ Found potential Google API keys in codebase"
+          exit 1
+        fi
+        
+        echo "✅ No sensitive data found in codebase"
+        
+  rag-integration:
+    runs-on: ubuntu-latest
+    # Only run if we have API secrets available
+    if: ${{ secrets.GEMINI_API_KEY != '' }}
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18.x'
+        cache: 'npm'
+        
+    - name: Install dependencies
+      run: npm ci
+      
+    - name: Test RAG pipeline with real API
+      run: |
+        # Create test documents
+        mkdir -p data/sample_pdfs
+        echo "Test content for integration testing" > data/sample_pdfs/test.txt
+        
+        # Run ingestion with real API
+        npx ts-node scripts/ingest_rag.ts --source data/sample_pdfs
+        
+        # Verify index was created
+        if [ ! -f "rag_index/index.json" ]; then
+          echo "❌ RAG index not created"
+          exit 1
+        fi
+        
+        echo "✅ RAG integration test passed"
+      env:
+        GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        RAG_INDEX_DRIVER: json
+        
+  performance:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18.x'
+        cache: 'npm'
+        
+    - name: Install dependencies
+      run: npm ci
+      
+    - name: Build application
+      run: npm run build
+      
+    - name: Performance tests
+      run: |
+        # Start the application in background
+        npm start &
+        SERVER_PID=$!
+        
+        # Wait for server to start
+        sleep 10
+        
+        # Test response times
+        echo "Testing API response times..."
+        
+        # Test existing API
+        time curl -s http://localhost:3000/api/get-resources
+        
+        # Test RAG API (should fallback gracefully without API key)
+        time curl -s -X POST http://localhost:3000/api/rag/ask \
+          -H "Content-Type: application/json" \
+          -d '{"question":"test","useRag":false}'
+        
+        # Clean up
+        kill $SERVER_PID
+        
+        echo "✅ Performance tests completed"

@@ -1,0 +1,2 @@
+# Treat encrypted archive as binary (no diffs)
+data.sec.tar.gz.gpg binary

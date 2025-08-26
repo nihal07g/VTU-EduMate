@@ -1,0 +1,24 @@
+BIS601 – Full Stack Development (ISE, 6th Semester, VTU 2022 Scheme)
+Overview: Full-stack application design using modern front-end frameworks, RESTful/GraphQL backends, and database integration. Emphasis on modular architecture, state management, API design, authentication/authorization, and deployment practices (CI/CD, containerization, cloud).
+
+Key Topics (exam focus): Component-based UI design, routing, forms and validation, asynchronous data fetching, REST vs GraphQL, ORM basics, schema design, security (JWT/OAuth2, CORS, CSRF), logging/monitoring, performance optimization, and production deployment. Typical questions cover end-to-end flows, trade-offs (SPA vs SSR), and security hardening checklists.
+
+Unit 1: Front-end Foundations
+Modern JavaScript ES6+ features: arrow functions, destructuring, promises, async/await, modules. React fundamentals: components, props, state, lifecycle methods, hooks (useState, useEffect, useContext). Virtual DOM concept and reconciliation. Component composition and prop drilling solutions.
+
+Unit 2: Back-end & APIs  
+Node.js runtime and Express.js framework. RESTful API design principles: resource-based URLs, HTTP methods, status codes, HATEOAS. GraphQL basics: schema definition, queries, mutations, resolvers. Middleware concepts: authentication, logging, error handling, CORS configuration.
+
+Unit 3: Databases & ORM
+Relational vs NoSQL database selection criteria. SQL fundamentals: joins, indexing, transactions, ACID properties. MongoDB document model and aggregation pipeline. ORM/ODM concepts: Sequelize for SQL, Mongoose for MongoDB. Database connection pooling and query optimization.
+
+Unit 4: Auth & Security
+Authentication vs authorization concepts. JWT token structure and validation. OAuth2 flow and implementation. Session management: cookies vs tokens. Security best practices: input validation, SQL injection prevention, XSS protection, CSRF tokens, HTTPS enforcement, rate limiting.
+
+Unit 5: Deployment & DevOps
+Version control with Git: branching strategies, pull requests. CI/CD pipeline design: automated testing, build processes, deployment strategies. Docker containerization: Dockerfile, images, containers, docker-compose. Cloud deployment: AWS/Azure basics, environment variables, scaling considerations.
+
+Sample Exam Questions:
+2-mark: Define JWT and list its three components.
+6-mark: Design a RESTful API for a library management system with proper HTTP methods and status codes.
+10-mark: Implement user authentication in a MERN stack application including password hashing and JWT generation.

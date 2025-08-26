@@ -1,0 +1,164 @@
+# Operating Systems - Module 2: Process Management
+
+## Unit 2.1: Process Concepts
+
+### Process Definition
+A process is a program in execution. It includes the program code, current activity (program counter), stack, data section, and heap.
+
+Process vs Program:
+- Program: Passive entity (code on disk)
+- Process: Active entity (program in execution)
+
+### Process States
+1. **New**: Process is being created
+2. **Ready**: Process is waiting to be assigned to processor
+3. **Running**: Instructions are being executed
+4. **Waiting/Blocked**: Process is waiting for some event
+5. **Terminated**: Process has finished execution
+
+State transitions occur due to scheduling decisions and I/O operations.
+
+### Process Control Block (PCB)
+PCB contains information associated with each process:
+- Process state and program counter
+- CPU registers and memory-management information
+- Accounting information and I/O status
+
+## Unit 2.2: Process Scheduling
+
+### Scheduling Objectives
+- Maximize CPU utilization
+- Maximize throughput (processes completed per time unit)
+- Minimize turnaround time (submission to completion)
+- Minimize waiting time (time spent in ready queue)
+- Minimize response time (first response time)
+
+### Scheduling Algorithms
+
+#### First-Come, First-Served (FCFS)
+Processes are executed in order of arrival. Simple but can cause convoy effect where short processes wait for long processes.
+
+Characteristics:
+- Non-preemptive
+- Average waiting time often quite long
+- No starvation
+
+#### Shortest Job First (SJF)
+Selects process with smallest expected CPU burst time. Optimal for minimizing average waiting time.
+
+Types:
+- Non-preemptive SJF
+- Preemptive SJF (Shortest Remaining Time First - SRTF)
+
+Challenge: Difficulty in knowing future CPU burst times
+
+#### Round Robin (RR)
+Each process gets small unit of CPU time (time quantum). After quantum expires, process is preempted and added to end of ready queue.
+
+Performance depends on time quantum size:
+- Too large: FCFS behavior
+- Too small: High context switching overhead
+
+#### Priority Scheduling
+Each process assigned priority number. CPU allocated to highest priority process.
+
+Types:
+- Preemptive priority scheduling
+- Non-preemptive priority scheduling
+
+Problem: Starvation of low-priority processes
+Solution: Aging (gradually increase priority)
+
+#### Multilevel Queue Scheduling
+Ready queue partitioned into separate queues based on process characteristics. Each queue has its own scheduling algorithm.
+
+Example: System processes, interactive processes, batch processes
+
+## Unit 2.3: Process Synchronization
+
+### Critical Section Problem
+Critical section is code segment where shared variables are accessed. Only one process should execute in critical section at a time.
+
+Requirements for solution:
+1. **Mutual Exclusion**: Only one process in critical section
+2. **Progress**: Selection of next process cannot be postponed indefinitely  
+3. **Bounded Waiting**: Limit on number of times other processes enter critical section
+
+### Synchronization Primitives
+
+#### Semaphores
+Semaphore is integer variable accessed through two atomic operations:
+- **wait(S)**: while S ≤ 0 do no-op; S--
+- **signal(S)**: S++
+
+Types:
+- **Binary semaphore**: Can be 0 or 1 (mutex)
+- **Counting semaphore**: Can be any non-negative value
+
+#### Mutex Locks
+Simplest synchronization tool. Boolean variable indicating if lock is available.
+
+Operations:
+- **acquire()**: Acquire the lock
+- **release()**: Release the lock
+
+#### Monitors
+High-level synchronization construct that provides mutual exclusion automatically. Only one process can be active within monitor at a time.
+
+Condition variables used for synchronization within monitors:
+- **wait()**: Suspend calling process
+- **signal()**: Resume one suspended process
+
+### Classic Synchronization Problems
+
+#### Producer-Consumer Problem
+Producer processes generate data, consumer processes use data. Shared buffer of fixed size.
+
+Synchronization needed:
+- Mutex for buffer access
+- Semaphores for empty/full buffer slots
+
+#### Readers-Writers Problem  
+Multiple readers can access shared data simultaneously, but writers need exclusive access.
+
+Variations:
+- First readers-writers problem: No reader waits unless writer has permission
+- Second readers-writers problem: Writer waits only if actively reading/writing
+
+#### Dining Philosophers Problem
+Five philosophers sit around circular table with chopsticks between them. Each needs two chopsticks to eat.
+
+Demonstrates deadlock and starvation issues in resource allocation.
+
+## Unit 2.4: Deadlocks
+
+### Deadlock Definition
+Set of processes blocked because each process holds resource and waits for resource held by another process in the set.
+
+### Necessary Conditions (Coffman Conditions)
+1. **Mutual Exclusion**: Resources cannot be shared
+2. **Hold and Wait**: Process holds resources while waiting for others
+3. **No Preemption**: Resources cannot be forcibly removed
+4. **Circular Wait**: Circular chain of waiting processes
+
+### Deadlock Handling Strategies
+
+#### Prevention
+Ensure at least one necessary condition cannot hold:
+- Eliminate mutual exclusion (usually not feasible)
+- Eliminate hold and wait (request all resources at once)
+- Allow preemption (not always possible)
+- Eliminate circular wait (order resources)
+
+#### Avoidance
+Use additional information about resource requests to avoid unsafe states.
+
+**Banker's Algorithm**: Check if granting request leads to safe state before allocation.
+
+#### Detection and Recovery
+Allow deadlocks to occur, detect them, and recover:
+- Detection: Resource allocation graphs, wait-for graphs
+- Recovery: Process termination, resource preemption
+
+#### Ignore the Problem
+Ostrich algorithm - assume deadlocks never occur. Used by many operating systems due to low probability and high cost of other approaches.

@@ -1,0 +1,21 @@
+# VTU EduMate - Python ML Dependencies
+# Machine Learning models for VTU question processing
+
+# Core ML libraries
+scikit-learn==1.3.0
+numpy==1.24.3
+pandas==2.0.3
+joblib==1.3.2
+
+# Text processing
+nltk==3.8.1
+textblob==0.17.1
+
+# Performance optimization
+numba==0.57.1
+
+# RAG Dependencies (optional for FAISS support)
+faiss-cpu==1.7.4
+
+# Utility
+requests==2.31.0

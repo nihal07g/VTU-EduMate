@@ -1,0 +1,83 @@
+# Data Structures & Algorithms - Module 3: Sorting & Searching
+
+## Unit 3.1: Elementary Sorting Algorithms
+
+### Bubble Sort
+Bubble sort repeatedly steps through the list, compares adjacent elements and swaps them if they are in the wrong order. The pass through the list is repeated until the list is sorted.
+
+Time Complexity: O(n²) worst case, O(n) best case
+Space Complexity: O(1)
+
+Algorithm:
+1. Compare adjacent elements
+2. Swap if first > second  
+3. Repeat until no swaps needed
+
+### Selection Sort
+Selection sort divides the input list into sorted and unsorted regions. It repeatedly selects the smallest element from the unsorted region and moves it to the sorted region.
+
+Time Complexity: O(n²) all cases
+Space Complexity: O(1)
+
+### Insertion Sort
+Insertion sort builds the final sorted array one item at a time. It takes elements from the unsorted portion and finds the correct position in the sorted portion.
+
+Time Complexity: O(n²) worst case, O(n) best case
+Space Complexity: O(1)
+
+## Unit 3.2: Advanced Sorting Algorithms
+
+### Merge Sort
+Merge sort is a divide-and-conquer algorithm that divides the array into halves, sorts them separately, and then merges the sorted halves.
+
+Time Complexity: O(n log n) all cases
+Space Complexity: O(n)
+
+Key advantage: Stable sorting algorithm
+
+### Quick Sort
+Quick sort picks a pivot element and partitions the array around the pivot, placing smaller elements before and larger elements after the pivot.
+
+Time Complexity: O(n log n) average, O(n²) worst case
+Space Complexity: O(log n) average
+
+Pivot selection strategies affect performance significantly.
+
+### Heap Sort
+Heap sort uses a binary heap data structure. It builds a max heap from the input data, then repeatedly extracts the maximum element and rebuilds the heap.
+
+Time Complexity: O(n log n) all cases
+Space Complexity: O(1)
+
+## Unit 3.3: Searching Algorithms
+
+### Linear Search
+Linear search sequentially checks each element until the target is found or the list ends.
+
+Time Complexity: O(n)
+Space Complexity: O(1)
+
+Best for: Unsorted arrays, small datasets
+
+### Binary Search
+Binary search works on sorted arrays by repeatedly dividing the search interval in half. Compares target with middle element.
+
+Time Complexity: O(log n)
+Space Complexity: O(1) iterative, O(log n) recursive
+
+Prerequisites: Array must be sorted
+
+Algorithm:
+1. Find middle element
+2. If target equals middle, return index
+3. If target < middle, search left half
+4. If target > middle, search right half
+5. Repeat until found or interval empty
+
+### Hash-based Search
+Hash tables provide O(1) average case search time using hash functions to map keys to array indices.
+
+Time Complexity: O(1) average, O(n) worst case
+Space Complexity: O(n)
+
+Collision resolution: Chaining, open addressing

@@ -1,0 +1,71 @@
+Data Structures and Algorithms - Unit 3: Trees and Heaps
+
+Trees are hierarchical data structures that consist of nodes connected by edges. Each tree has a root node, and every other node has exactly one parent. Trees are fundamental in computer science and have numerous applications.
+
+Binary Trees
+A binary tree is a tree data structure where each node has at most two children, referred to as the left child and right child. Binary trees are used in many algorithms and data structures.
+
+Properties of Binary Trees:
+- Maximum number of nodes at level i is 2^i
+- Maximum number of nodes in a binary tree of height h is 2^(h+1) - 1
+- Minimum height of a binary tree with n nodes is log2(n+1) - 1
+
+Tree Traversals
+There are three main ways to traverse a binary tree:
+1. Inorder Traversal (Left, Root, Right)
+2. Preorder Traversal (Root, Left, Right)
+3. Postorder Traversal (Left, Right, Root)
+
+Binary Search Trees
+A Binary Search Tree (BST) is a binary tree where for each node:
+- All nodes in the left subtree have values less than the node's value
+- All nodes in the right subtree have values greater than the node's value
+- Both left and right subtrees are also binary search trees
+
+BST Operations:
+- Search: O(log n) average case, O(n) worst case
+- Insert: O(log n) average case, O(n) worst case
+- Delete: O(log n) average case, O(n) worst case
+
+Heaps and Priority Queues
+A heap is a complete binary tree that satisfies the heap property. There are two types:
+- Max Heap: Parent node is greater than or equal to its children
+- Min Heap: Parent node is less than or equal to its children
+
+Heap Operations:
+- Insert: Add element at the end and heapify up - O(log n)
+- Extract Max/Min: Remove root and heapify down - O(log n)
+- Build Heap: Convert array to heap - O(n)
+
+Priority Queue
+A priority queue is an abstract data type that operates similar to a regular queue but each element has a priority. Elements with higher priority are served before elements with lower priority.
+
+Priority Queue Implementation:
+- Using arrays: Simple but inefficient for large datasets
+- Using linked lists: Better insertion but still inefficient search
+- Using heaps: Most efficient with O(log n) operations
+
+Heap Sort Algorithm
+Heap sort is a comparison-based sorting algorithm that uses a binary heap data structure:
+1. Build a max heap from the input array
+2. Repeatedly extract the maximum element and place it at the end
+3. Reduce heap size and heapify
+
+Time Complexity: O(n log n) in all cases
+Space Complexity: O(1) as it sorts in-place
+
+Applications of Trees and Heaps:
+- File systems use tree structures
+- Expression parsing uses binary trees
+- Database indexing uses B-trees
+- Operating system scheduling uses priority queues
+- Dijkstra's algorithm uses min heaps
+- Huffman coding uses binary trees
+
+Tree Balancing
+Self-balancing trees maintain their balance automatically:
+- AVL Trees: Height difference between subtrees is at most 1
+- Red-Black Trees: Use color coding to maintain balance
+- Splay Trees: Recently accessed nodes move to the root
+
+These data structures ensure O(log n) operations even in worst-case scenarios, making them essential for database implementations and search algorithms used in modern computing systems.

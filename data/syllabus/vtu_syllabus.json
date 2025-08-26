@@ -1,0 +1,684 @@
+{
+  "2022": {
+    "CSE": {
+      "1": {
+        "Mathematics for CSE Stream-I": {
+          "code": "BMATS101",
+          "credits": 4,
+          "description": "Differential Calculus, Integral Calculus, Differential Equations, Infinite Series, Vector Calculus",
+          "modules": [
+            "Differential Calculus - Limits, continuity, derivatives, applications of derivatives",
+            "Integral Calculus - Integration techniques, definite integrals, applications",
+            "Differential Equations - First-order equations, linear differential equations",
+            "Infinite Series - Taylor's and Maclaurin's series, convergence tests",
+            "Vector Calculus - Scalar and vector fields, gradient, divergence, curl"
+          ],
+          "keywords": ["mathematics", "calculus", "differential", "integral", "vector"],
+          "scheme": "2022"
+        },
+        "Applied Physics for CSE Stream": {
+          "code": "BPHYS102",
+          "credits": 4,
+          "description": "Wave Optics, Lasers and Fiber Optics, Quantum Mechanics, Crystal Physics, Semiconductor Physics",
+          "modules": [
+            "Wave Optics - Interference, diffraction, polarization phenomena",
+            "Lasers and Fiber Optics - Laser principles, types, fiber optic communication",
+            "Quantum Mechanics - Wave-particle duality, Schrödinger equation basics",
+            "Crystal Physics - Crystal structure, X-ray diffraction, band theory",
+            "Semiconductor Physics - p-n junctions, diodes, transistor fundamentals"
+          ],
+          "keywords": ["physics", "optics", "laser", "quantum", "semiconductor"],
+          "scheme": "2022"
+        },
+        "Applied Chemistry for CSE Stream": {
+          "code": "BCHES102",
+          "credits": 4,
+          "description": "Atomic and Molecular Structure, Thermodynamics and Electrochemistry, Materials Chemistry",
+          "modules": [
+            "Atomic and Molecular Structure - Electronic configuration, chemical bonding",
+            "Thermodynamics and Electrochemistry - Laws of thermodynamics, galvanic cells",
+            "Materials Chemistry - Polymers, composites, nanomaterials",
+            "Water Chemistry and Environmental Chemistry - Water treatment, pollution control",
+            "Fuels and Combustion - Types of fuels, calorific value, combustion analysis"
+          ],
+          "keywords": ["chemistry", "thermodynamics", "materials", "polymers", "fuel"],
+          "scheme": "2022"
+        },
+        "Principles of Programming Using C": {
+          "code": "BPOPS103",
+          "credits": 3,
+          "description": "Introduction to Programming, C Programming Basics, Functions and Arrays, Pointers and Strings",
+          "modules": [
+            "Introduction to Programming - Problem-solving, algorithms, flowcharts",
+            "C Programming Basics - Data types, operators, control structures",
+            "Functions and Arrays - Function definition, array operations",
+            "Pointers and Strings - Pointer arithmetic, string manipulation",
+            "File Handling and Structures - File operations, user-defined data types"
+          ],
+          "keywords": ["programming", "c language", "algorithms", "data types", "functions"],
+          "scheme": "2022"
+        }
+      },
+      "3": {
+        "Mathematics for Computer Science": {
+          "code": "BCS301",
+          "credits": 3,
+          "description": "Set Theory and Relations, Mathematical Logic, Combinatorics, Graph Theory, Number Theory",
+          "modules": [
+            "Set Theory and Relations - Set operations, relations, functions, equivalence relations",
+            "Mathematical Logic - Propositional logic, predicate logic, proof techniques",
+            "Combinatorics - Permutations, combinations, generating functions, recurrence relations",
+            "Graph Theory - Basic concepts, trees, connectivity, shortest paths",
+            "Number Theory - Divisibility, modular arithmetic, prime numbers, RSA algorithm"
+          ],
+          "keywords": ["mathematics", "set theory", "logic", "combinatorics", "graph theory"],
+          "scheme": "2022"
+        },
+        "Digital Design & Computer Organization": {
+          "code": "BCS302",
+          "credits": 3,
+          "description": "Number Systems and Codes, Boolean Algebra and Logic Gates, Combinational and Sequential Logic",
+          "modules": [
+            "Number Systems and Codes - Binary, octal, hexadecimal, BCD, Gray code",
+            "Boolean Algebra and Logic Gates - Boolean functions, Karnaugh maps, gate optimization",
+            "Combinational Logic Circuits - Adders, subtractors, multiplexers, decoders, encoders",
+            "Sequential Logic Circuits - Flip-flops, counters, registers, state machines",
+            "Computer Organization - CPU architecture, instruction formats, addressing modes"
+          ],
+          "keywords": ["digital design", "boolean algebra", "logic gates", "computer organization"],
+          "scheme": "2022"
+        },
+        "Operating Systems": {
+          "code": "BCS303",
+          "credits": 3,
+          "description": "Introduction to Operating Systems, Process Management, Memory Management, File Systems, I/O Management and Deadlocks",
+          "modules": [
+            "Introduction to Operating Systems - Types, services, system calls, kernel architecture",
+            "Process Management - Process states, scheduling algorithms, process synchronization, inter-process communication",
+            "Memory Management - Paging, segmentation, virtual memory, page replacement algorithms",
+            "File Systems - File allocation methods, directory structures, file protection, file system implementation",
+            "I/O Management and Deadlocks - Device drivers, disk scheduling, deadlock prevention, detection and recovery"
+          ],
+          "keywords": ["operating system", "process", "memory", "scheduling", "deadlock", "file system", "synchronization", "virtual memory"],
+          "scheme": "2022"
+        },
+        "Data Structures and Applications": {
+          "code": "BCS304",
+          "credits": 3,
+          "description": "Introduction and Arrays, Linked Lists, Stacks and Queues, Trees, Graphs and Hashing",
+          "modules": [
+            "Introduction and Arrays - Linear and non-linear data structures, array operations, time complexity analysis",
+            "Linked Lists - Singly, doubly, and circular linked lists, applications and implementations",
+            "Stacks and Queues - Implementation, applications, expression evaluation, queue variations",
+            "Trees - Binary trees, BST, AVL trees, heap, tree traversals, applications",
+            "Graphs and Hashing - Graph representation, traversal algorithms, hash functions, collision handling"
+          ],
+          "keywords": ["data structures", "arrays", "linked lists", "trees", "graphs", "hashing", "algorithms"],
+          "scheme": "2022"
+        },
+        "Social Connect and Responsibility": {
+          "code": "BSCK307",
+          "credits": 2,
+          "description": "Constitutional Values and Social Justice, Community Engagement, Environmental Awareness",
+          "modules": [
+            "Constitutional Values and Social Justice - Fundamental rights, duties, equality",
+            "Community Engagement - Social service, rural development programs",
+            "Environmental Awareness - Climate change, sustainable development",
+            "Gender Sensitization - Gender equality, women empowerment",
+            "Professional Ethics - Engineering ethics, code of conduct"
+          ],
+          "keywords": ["social responsibility", "ethics", "environment", "community"],
+          "scheme": "2022"
+        }
+      },
+      "4": {
+        "Analysis & Design of Algorithms": {
+          "code": "BCS401",
+          "credits": 3,
+          "description": "Algorithm Analysis, Divide and Conquer, Greedy Algorithms, Dynamic Programming, Graph Algorithms",
+          "modules": [
+            "Algorithm Analysis - Time and space complexity, asymptotic notation, best/worst case",
+            "Divide and Conquer - Merge sort, quick sort, binary search, closest pair problem",
+            "Greedy Algorithms - Activity selection, fractional knapsack, Huffman coding",
+            "Dynamic Programming - Optimal substructure, 0/1 knapsack, longest common subsequence",
+            "Graph Algorithms - BFS, DFS, shortest path algorithms, minimum spanning tree"
+          ],
+          "keywords": ["algorithms", "complexity", "divide conquer", "dynamic programming", "graph"],
+          "scheme": "2022"
+        },
+        "Microcontrollers": {
+          "code": "BCS402",
+          "credits": 3,
+          "description": "Introduction to Microcontrollers, 8051 Microcontroller Architecture, Programming, Interfacing",
+          "modules": [
+            "Introduction to Microcontrollers - Architecture comparison, applications",
+            "8051 Microcontroller Architecture - Pin diagram, memory organization, SFRs",
+            "8051 Programming - Assembly language, instruction set, addressing modes",
+            "Interfacing Techniques - LED, switches, seven-segment displays, motors",
+            "Advanced Applications - Timers, interrupts, serial communication, real-time systems"
+          ],
+          "keywords": ["microcontroller", "8051", "assembly", "programming", "interfacing"],
+          "scheme": "2022"
+        },
+        "Database Management Systems": {
+          "code": "BCS403",
+          "credits": 3,
+          "description": "Database Concepts, Relational Model, SQL Programming, Database Design, Transaction Management",
+          "modules": [
+            "Database Concepts - Data models, database architecture, DBMS functions",
+            "Relational Model - Relations, keys, integrity constraints, relational algebra",
+            "SQL Programming - DDL, DML, DCL, queries, joins, subqueries, views",
+            "Database Design - ER modeling, normalization, functional dependencies",
+            "Transaction Management - ACID properties, concurrency control, recovery"
+          ],
+          "keywords": ["database", "sql", "dbms", "normalization", "transaction"],
+          "scheme": "2022"
+        },
+        "Biology for Computer Engineers": {
+          "code": "BBOC407",
+          "credits": 3,
+          "description": "Cell Biology and Genetics, Bioinformatics, Computational Biology, Biomimetics",
+          "modules": [
+            "Cell Biology and Genetics - Cell structure, DNA, RNA, protein synthesis",
+            "Bioinformatics - Sequence analysis, database searching, phylogenetic analysis",
+            "Computational Biology - Algorithm design for biological problems",
+            "Biomimetics - Nature-inspired computing, swarm intelligence",
+            "Biotechnology Applications - Biometrics, medical informatics, drug discovery"
+          ],
+          "keywords": ["biology", "bioinformatics", "computational biology", "biomimetics"],
+          "scheme": "2022"
+        }
+      },
+      "5": {
+        "Software Engineering & Project Management": {
+          "code": "BCS501",
+          "credits": 4,
+          "description": "Software Engineering Fundamentals, System Analysis and Design, Software Testing, Project Management",
+          "modules": [
+            "Software Engineering Fundamentals - SDLC models, requirements engineering",
+            "System Analysis and Design - Design principles, architectural patterns, UML",
+            "Software Testing - Testing strategies, white-box, black-box testing, automation",
+            "Project Management - Project planning, scheduling, resource allocation, risk management",
+            "Software Quality and Maintenance - Quality metrics, configuration management, version control"
+          ],
+          "keywords": ["software engineering", "sdlc", "testing", "project management"],
+          "scheme": "2022"
+        },
+        "Computer Networks": {
+          "code": "BCS502",
+          "credits": 4,
+          "description": "Network Fundamentals, Physical and Data Link Layer, Network Layer, Transport Layer, Application Layer",
+          "modules": [
+            "Network Fundamentals - OSI model, TCP/IP protocol suite, network topologies",
+            "Physical and Data Link Layer - Transmission media, error detection and correction",
+            "Network Layer - IP addressing, subnetting, routing algorithms, ICMP",
+            "Transport Layer - TCP, UDP, flow control, congestion control, socket programming",
+            "Application Layer - HTTP, HTTPS, FTP, SMTP, DNS, network security basics"
+          ],
+          "keywords": ["computer networks", "tcp/ip", "routing", "protocols", "network security"],
+          "scheme": "2022"
+        },
+        "Theory of Computation": {
+          "code": "BCS503",
+          "credits": 3,
+          "description": "Finite Automata, Context-Free Languages, Turing Machines, Computability Theory, Complexity Theory",
+          "modules": [
+            "Finite Automata - DFA, NFA, regular expressions, regular grammars",
+            "Context-Free Languages - CFG, Chomsky normal form, pushdown automata",
+            "Turing Machines - TM variants, Church-Turing thesis, recursive languages",
+            "Computability Theory - Decidability, undecidability, halting problem",
+            "Complexity Theory - Time and space complexity, P, NP, NP-complete problems"
+          ],
+          "keywords": ["automata", "formal languages", "turing machine", "complexity", "computability"],
+          "scheme": "2022"
+        }
+      },
+      "6": {
+        "Cloud Computing": {
+          "code": "BCS601",
+          "credits": 4,
+          "description": "Cloud Computing Fundamentals, Cloud Architecture, Cloud Service Providers, Cloud Security",
+          "modules": [
+            "Cloud Computing Fundamentals - Service models (IaaS, PaaS, SaaS), deployment models",
+            "Cloud Architecture - Virtualization, containerization, microservices",
+            "Cloud Service Providers - AWS, Microsoft Azure, Google Cloud Platform, services comparison",
+            "Cloud Security and Privacy - Authentication, encryption, compliance, data protection",
+            "Cloud Applications - Big data analytics, IoT in cloud, serverless computing"
+          ],
+          "keywords": ["cloud computing", "aws", "azure", "virtualization", "microservices"],
+          "scheme": "2022"
+        },
+        "Machine Learning": {
+          "code": "BCS602",
+          "credits": 4,
+          "description": "Supervised and unsupervised learning algorithms, model evaluation, and practical applications",
+          "modules": [
+            "Supervised Learning - Linear/logistic regression, k-NN, Naïve Bayes, decision trees",
+            "Support Vector Machines - Maximum margin, kernel trick, multi-class classification",
+            "Decision Trees & Ensembles - Random Forest, boosting algorithms, bias-variance trade-off",
+            "Unsupervised Learning - K-means clustering, hierarchical clustering, PCA dimensionality reduction",
+            "Model Evaluation & Selection - Cross-validation, performance metrics, ROC curves, confusion matrix"
+          ],
+          "keywords": ["machine learning", "supervised learning", "svm", "clustering", "evaluation"],
+          "scheme": "2022"
+        }
+      },
+      "7": {
+        "Artificial Intelligence": {
+          "code": "BCS701",
+          "credits": 4,
+          "description": "AI Fundamentals, Knowledge Representation, Expert Systems, Machine Learning in AI, AI Applications",
+          "modules": [
+            "AI Fundamentals - Problem-solving, search algorithms, heuristic search",
+            "Knowledge Representation - Logic, semantic networks, frames, ontologies",
+            "Expert Systems - Rule-based systems, inference engines, knowledge acquisition",
+            "Machine Learning in AI - Pattern recognition, neural networks, genetic algorithms",
+            "AI Applications - Natural language processing, computer vision, robotics"
+          ],
+          "keywords": ["artificial intelligence", "expert systems", "knowledge representation", "nlp"],
+          "scheme": "2022"
+        }
+      }
+    },
+    "ECE": {
+      "3": {
+        "Mathematics for ECE": {
+          "code": "BEC301",
+          "credits": 3,
+          "description": "Transform Calculus, Fourier Series and Numerical Techniques for ECE applications",
+          "modules": [
+            "Laplace Transform - Properties, inverse transforms, applications to differential equations",
+            "Fourier Series - Trigonometric and exponential series, half-range expansions",
+            "Fourier Transform - Properties, applications to signal processing",
+            "Z-Transform - Properties, inverse z-transforms, applications to discrete systems",
+            "Numerical Methods - Solution of algebraic and transcendental equations"
+          ],
+          "keywords": ["mathematics", "transforms", "fourier", "laplace", "numerical methods"],
+          "scheme": "2022"
+        },
+        "Analog Electronics Circuits": {
+          "code": "BEC302",
+          "credits": 4,
+          "description": "Diode Circuits, BJT Amplifiers, FET Amplifiers, Op-Amp Applications, Oscillators and Multivibrators",
+          "modules": [
+            "Diode Circuits - Rectifiers, clippers, clampers, voltage multipliers",
+            "BJT Amplifiers - CE, CB, CC configurations, bias stability, frequency response",
+            "FET Amplifiers - JFET and MOSFET amplifiers, bias circuits",
+            "Op-Amp Applications - Linear and non-linear applications, active filters",
+            "Oscillators and Multivibrators - RC, LC, crystal oscillators, astable multivibrators"
+          ],
+          "keywords": ["analog electronics", "amplifiers", "op-amp", "oscillators", "transistors"],
+          "scheme": "2022"
+        }
+      },
+      "5": {
+        "Communication Systems": {
+          "code": "BEC501",
+          "credits": 4,
+          "description": "Analog Communication Systems, Modulation Techniques, Noise Analysis, Information Theory",
+          "modules": [
+            "Amplitude Modulation - AM, DSB-SC, SSB-SC modulation and demodulation",
+            "Frequency and Phase Modulation - FM, PM generation and detection",
+            "Superheterodyne Receivers - AM and FM receiver architectures",
+            "Noise in Communication Systems - Noise analysis in AM and FM systems",
+            "Information Theory - Entropy, channel capacity, error correction codes"
+          ],
+          "keywords": ["communication", "modulation", "amplitude", "frequency", "noise"],
+          "scheme": "2022"
+        },
+        "Microprocessors": {
+          "code": "BEC502",
+          "credits": 4,
+          "description": "8086 Microprocessor Architecture, Assembly Language Programming, Interfacing Techniques",
+          "modules": [
+            "8086 Microprocessor Architecture - Internal architecture, pin diagram, memory segmentation",
+            "Instruction Set and Programming - Data transfer, arithmetic, logic, control instructions",
+            "Memory and I/O Interfacing - Memory interfacing, I/O mapped and memory mapped I/O",
+            "Interrupt Handling - Hardware and software interrupts, interrupt service routines",
+            "Applications and Case Studies - Microprocessor-based system design examples"
+          ],
+          "keywords": ["microprocessor", "8086", "assembly", "interfacing", "programming"],
+          "scheme": "2022"
+        }
+      }
+    },
+    "ME": {
+      "5": {
+        "Heat and Mass Transfer": {
+          "code": "BME501",
+          "credits": 4,
+          "description": "Conduction Heat Transfer, Convection Heat Transfer, Radiation Heat Transfer, Heat Exchangers",
+          "modules": [
+            "Conduction Heat Transfer - Fourier's law, steady and unsteady conduction",
+            "Convection Heat Transfer - Forced and natural convection, boundary layer theory",
+            "Radiation Heat Transfer - Laws of radiation, radiation exchange between surfaces",
+            "Heat Exchangers - Types, LMTD and effectiveness-NTU methods",
+            "Mass Transfer Fundamentals - Diffusion, mass transfer coefficients"
+          ],
+          "keywords": ["heat transfer", "conduction", "convection", "radiation", "mass transfer"],
+          "scheme": "2022"
+        },
+        "Fluid Mechanics": {
+          "code": "BME502",
+          "credits": 4,
+          "description": "Fluid Properties and Statics, Fluid Kinematics, Fluid Dynamics, Flow through Pipes, Hydraulic Machines",
+          "modules": [
+            "Fluid Properties and Statics - Density, viscosity, surface tension, hydrostatic pressure",
+            "Fluid Kinematics - Flow visualization, stream function, velocity potential",
+            "Fluid Dynamics - Euler's and Bernoulli's equations, momentum equation",
+            "Flow through Pipes - Laminar and turbulent flow, friction losses, pipe networks",
+            "Hydraulic Machines - Centrifugal pumps, turbines, performance characteristics"
+          ],
+          "keywords": ["fluid mechanics", "fluid properties", "flow", "pipes", "hydraulic machines"],
+          "scheme": "2022"
+        }
+      }
+    },
+    "EEE": {
+      "5": {
+        "Power Systems": {
+          "code": "BEE501",
+          "credits": 4,
+          "description": "Power Generation, Transmission Systems, Distribution Systems, Load Flow Analysis, Fault Analysis",
+          "modules": [
+            "Power Generation - Thermal, hydro, nuclear power plants, renewable energy sources",
+            "Transmission Systems - Transmission line parameters, modeling, performance",
+            "Distribution Systems - Radial and ring main distributors, voltage regulation",
+            "Load Flow Analysis - Bus admittance matrix, Gauss-Seidel, Newton-Raphson methods",
+            "Fault Analysis - Symmetrical and unsymmetrical faults, protection schemes"
+          ],
+          "keywords": ["power systems", "generation", "transmission", "distribution", "load flow"],
+          "scheme": "2022"
+        }
+      }
+    },
+    "Civil": {
+      "5": {
+        "Structural Analysis": {
+          "code": "BCE501",
+          "credits": 4,
+          "description": "Statically Determinate Structures, Method of Joints and Sections, Deflection of Beams",
+          "modules": [
+            "Statically Determinate Structures - Analysis of beams, frames, and trusses",
+            "Method of Joints and Sections - Truss analysis using equilibrium equations",
+            "Deflection of Beams - Moment-area method, conjugate beam method",
+            "Statically Indeterminate Structures - Force and displacement methods",
+            "Matrix Methods - Stiffness method, flexibility method"
+          ],
+          "keywords": ["structural analysis", "beams", "trusses", "deflection", "matrix methods"],
+          "scheme": "2022"
+        }
+      }
+    },
+    "ISE": {
+      "5": {
+        "Information Storage and Retrieval": {
+          "code": "BIS501",
+          "credits": 4,
+          "description": "Information Retrieval Models, Indexing and Searching, Web Search Engines, Information Filtering",
+          "modules": [
+            "Information Retrieval Models - Boolean, vector space, probabilistic models",
+            "Indexing and Searching - Inverted indexes, query processing, ranking algorithms",
+            "Web Search Engines - Crawling, indexing, PageRank algorithm",
+            "Information Filtering - Collaborative filtering, content-based filtering",
+            "Digital Libraries - Metadata, preservation, access control"
+          ],
+          "keywords": ["information retrieval", "search engines", "indexing", "digital libraries"],
+          "scheme": "2022"
+        }
+      },
+      "6": {
+        "Full Stack Development": {
+          "code": "BIS601",
+          "credits": 4,
+          "description": "Modern web development using front-end frameworks, RESTful/GraphQL APIs, databases, and deployment",
+          "modules": [
+            "Front-end Foundations - Modern JavaScript ES6+, React fundamentals, component architecture",
+            "Back-end & APIs - Node.js, Express.js, RESTful API design, GraphQL basics",
+            "Databases & ORM - SQL/NoSQL databases, ORM concepts, query optimization",
+            "Auth & Security - JWT, OAuth2, security best practices, CORS, CSRF protection",
+            "Deployment & DevOps - Git workflows, CI/CD pipelines, Docker containerization, cloud deployment"
+          ],
+          "keywords": ["full stack", "react", "nodejs", "api", "deployment", "devops"],
+          "scheme": "2022"
+        },
+        "Machine Learning": {
+          "code": "BCS602",
+          "credits": 4,
+          "description": "Supervised and unsupervised learning algorithms, model evaluation, and practical applications",
+          "modules": [
+            "Supervised Learning - Linear/logistic regression, k-NN, Naïve Bayes, decision trees",
+            "Support Vector Machines - Maximum margin, kernel trick, multi-class classification",
+            "Decision Trees & Ensembles - Random Forest, boosting algorithms, bias-variance trade-off",
+            "Unsupervised Learning - K-means clustering, hierarchical clustering, PCA dimensionality reduction",
+            "Model Evaluation & Selection - Cross-validation, performance metrics, ROC curves, confusion matrix"
+          ],
+          "keywords": ["machine learning", "supervised learning", "svm", "clustering", "evaluation"],
+          "scheme": "2022"
+        },
+        "Cloud Computing & Security": {
+          "code": "BIS613D",
+          "credits": 3,
+          "description": "Cloud service models, virtualization, security controls, and compliance frameworks",
+          "modules": [
+            "Cloud Models & Virtualization - IaaS/PaaS/SaaS, deployment models, containers vs VMs",
+            "Networking & Storage - VPC, security groups, load balancing, CDN, cloud storage types",
+            "Identity & Access Management - RBAC, ABAC, SSO, federated identity, principle of least privilege",
+            "Data Protection & Monitoring - Encryption at rest/transit, SIEM, vulnerability scanning, incident response",
+            "Compliance & Zero Trust - SOC 2, ISO 27001, GDPR, shared responsibility model, zero trust architecture"
+          ],
+          "keywords": ["cloud computing", "security", "iaas", "paas", "saas", "compliance", "zero trust"],
+          "scheme": "2022"
+        }
+      }
+    },
+    "ELECTIVES": {
+      "6": {
+        "Renewable Energy & Power Plants": {
+          "code": "BME654B",
+          "credits": 3,
+          "description": "Renewable energy technologies, conventional power plants, grid integration, and economics",
+          "modules": [
+            "Solar & Wind Energy - PV characteristics, MPPT, wind turbine power curves, Betz limit",
+            "Hydro & Biomass Energy - Hydroelectric systems, turbine selection, biomass conversion processes",
+            "Geothermal & Energy Storage - Geothermal systems, battery technologies, pumped storage, CAES",
+            "Conventional Power Plants - Steam power Rankine cycle, gas turbines, combined cycle efficiency",
+            "Grid Integration & Economics - Grid stability, LCOE calculations, capacity factor, environmental impact"
+          ],
+          "keywords": ["renewable energy", "solar", "wind", "hydro", "biomass", "geothermal", "power plants"],
+          "scheme": "2022"
+        }
+      }
+    }
+  },
+  "2021": {
+    "CSE": {
+      "1": {
+        "Calculus and Linear Algebra": {
+          "code": "21MAT11",
+          "credits": 3,
+          "description": "Differential calculus, integral calculus, differential equations, linear algebra fundamentals",
+          "modules": [
+            "Differential Calculus - Limits, continuity, differentiation techniques",
+            "Integral Calculus - Integration methods, definite integrals, applications",
+            "Differential Equations - First order differential equations, linear equations",
+            "Matrices and Determinants - Matrix operations, eigenvalues, eigenvectors",
+            "Vector Spaces - Linear independence, basis, linear transformations"
+          ],
+          "keywords": ["mathematics", "calculus", "linear algebra", "matrices", "vectors"],
+          "scheme": "2021"
+        },
+        "Engineering Physics": {
+          "code": "21PHY12",
+          "credits": 3,
+          "description": "Wave optics, quantum mechanics, crystal physics, semiconductor devices",
+          "modules": [
+            "Wave Optics - Interference, diffraction, polarization",
+            "Quantum Mechanics - Wave-particle duality, Schrödinger equation",
+            "Crystal Physics - Crystal structure, X-ray diffraction",
+            "Semiconductor Devices - p-n junction, transistors, photodiodes",
+            "Superconductivity and Nanomaterials - Properties and applications"
+          ],
+          "keywords": ["physics", "optics", "quantum", "semiconductor", "nanomaterials"],
+          "scheme": "2021"
+        }
+      },
+      "3": {
+        "Transform Calculus, Fourier Series and Numerical Techniques": {
+          "code": "21MAT31",
+          "credits": 3,
+          "description": "Laplace transforms, Fourier series, Z-transforms, numerical methods",
+          "modules": [
+            "Laplace Transform - Properties, inverse transforms, applications",
+            "Fourier Series - Trigonometric and exponential series",
+            "Fourier Transform - Properties and applications",
+            "Z-Transform - Properties, inverse z-transforms",
+            "Numerical Methods - Root finding, interpolation, integration"
+          ],
+          "keywords": ["mathematics", "transforms", "fourier", "numerical methods"],
+          "scheme": "2021"
+        },
+        "Data Structures and Applications": {
+          "code": "21CS32",
+          "credits": 4,
+          "description": "Linear and non-linear data structures, algorithms, applications",
+          "modules": [
+            "Introduction and Arrays - Data structure concepts, array operations",
+            "Linked Lists - Singly, doubly, circular linked lists",
+            "Stacks and Queues - Implementation and applications",
+            "Trees - Binary trees, BST, AVL trees, heap",
+            "Graphs and Hashing - Graph algorithms, hash tables"
+          ],
+          "keywords": ["data structures", "algorithms", "trees", "graphs", "hashing"],
+          "scheme": "2021"
+        }
+      },
+      "5": {
+        "Computer Networks": {
+          "code": "21CS55",
+          "credits": 4,
+          "description": "Network models and protocols, physical and data link layer, network layer, transport layer",
+          "modules": [
+            "Network Models and Protocols - OSI and TCP/IP models, protocol layering",
+            "Physical and Data Link Layer - Transmission media, error detection and correction",
+            "Network Layer - IP addressing, routing algorithms, ICMP",
+            "Transport Layer - TCP, UDP, flow and congestion control",
+            "Application Layer - HTTP, FTP, SMTP, DNS protocols"
+          ],
+          "keywords": ["networks", "protocols", "tcp/ip", "routing", "applications"],
+          "scheme": "2021"
+        },
+        "Database Management Systems": {
+          "code": "21CS53",
+          "credits": 4,
+          "description": "Database concepts, ER model, relational model, SQL, normalization, transaction processing",
+          "modules": [
+            "Introduction to DBMS - Database concepts, architecture, data models",
+            "ER Model and Relational Model - Entity-relationship modeling, relational algebra",
+            "SQL and Database Design - SQL queries, joins, subqueries, views",
+            "Normalization - Functional dependencies, normal forms",
+            "Transaction Processing - ACID properties, concurrency control, recovery"
+          ],
+          "keywords": ["database", "sql", "er model", "normalization", "transactions"],
+          "scheme": "2021"
+        }
+      }
+    },
+    "ECE": {
+      "3": {
+        "Digital System Design using Verilog": {
+          "code": "21EC32",
+          "credits": 4,
+          "description": "Digital design concepts, Verilog HDL, combinational and sequential circuits",
+          "modules": [
+            "Digital Design Fundamentals - Number systems, Boolean algebra, logic gates",
+            "Verilog HDL Basics - Data types, operators, modules, testbenches",
+            "Combinational Logic Design - Adders, multiplexers, decoders, encoders",
+            "Sequential Logic Design - Flip-flops, counters, registers, state machines",
+            "Advanced Verilog - Behavioral modeling, synthesis, timing analysis"
+          ],
+          "keywords": ["digital design", "verilog", "hdl", "combinational", "sequential"],
+          "scheme": "2021"
+        },
+        "Basic Signal Processing": {
+          "code": "21EC33",
+          "credits": 4,
+          "description": "Signals and systems, Fourier analysis, Z-transform, digital filters",
+          "modules": [
+            "Signals and Systems - Classification of signals, system properties",
+            "Fourier Analysis - Fourier series, Fourier transform, DFT",
+            "Laplace and Z-Transform - Properties, inverse transforms, system analysis",
+            "Digital Signal Processing - Sampling, quantization, digital filters",
+            "Filter Design - FIR and IIR filter design techniques"
+          ],
+          "keywords": ["signal processing", "fourier", "digital filters", "transforms"],
+          "scheme": "2021"
+        }
+      }
+    },
+    "EEE": {
+      "3": {
+        "Analog Electronic Circuits and Op-Amps": {
+          "code": "21EE32",
+          "credits": 4,
+          "description": "Analog circuits, operational amplifiers, applications, oscillators",
+          "modules": [
+            "Diode and Rectifier Circuits - Diode characteristics, rectifier circuits",
+            "BJT Amplifiers - CE, CB, CC configurations, bias circuits",
+            "FET Amplifiers - JFET and MOSFET amplifiers, small signal analysis",
+            "Operational Amplifiers - Op-amp characteristics, linear applications",
+            "Oscillators and Timers - RC, LC oscillators, 555 timer applications"
+          ],
+          "keywords": ["analog electronics", "op-amp", "amplifiers", "oscillators"],
+          "scheme": "2021"
+        },
+        "Electric Circuit Analysis": {
+          "code": "21EE33",
+          "credits": 4,
+          "description": "DC and AC circuit analysis, network theorems, resonance, three-phase circuits",
+          "modules": [
+            "DC Circuit Analysis - Ohm's law, Kirchhoff's laws, nodal and mesh analysis",
+            "Network Theorems - Superposition, Thevenin's, Norton's, maximum power transfer",
+            "AC Circuit Analysis - Phasors, impedance, power in AC circuits",
+            "Resonance - Series and parallel resonance, Q factor, bandwidth",
+            "Three-Phase Circuits - Balanced and unbalanced three-phase systems"
+          ],
+          "keywords": ["electric circuits", "ac analysis", "network theorems", "three phase"],
+          "scheme": "2021"
+        }
+      }
+    },
+    "ME": {
+      "5": {
+        "Theory of Machines": {
+          "code": "21ME51",
+          "credits": 4,
+          "description": "Kinematics and dynamics of machines, mechanisms, gears, cams",
+          "modules": [
+            "Mechanisms and Machines - Links, pairs, chains, degrees of freedom",
+            "Velocity and Acceleration Analysis - Graphical and analytical methods",
+            "Gears and Gear Trains - Spur gears, helical gears, gear ratios",
+            "Cams and Followers - Cam profiles, motion curves, design",
+            "Balancing - Static and dynamic balancing of rotating masses"
+          ],
+          "keywords": ["machines", "mechanisms", "gears", "kinematics", "dynamics"],
+          "scheme": "2021"
+        },
+        "Thermo-fluids Engineering": {
+          "code": "21ME52",
+          "credits": 4,
+          "description": "Thermodynamics, fluid mechanics, heat transfer fundamentals",
+          "modules": [
+            "Thermodynamic Cycles - Otto, Diesel, Rankine, Brayton cycles",
+            "Fluid Statics and Dynamics - Pressure, buoyancy, Bernoulli's equation",
+            "Flow through Pipes - Friction losses, pipe networks",
+            "Heat Transfer - Conduction, convection, radiation basics",
+            "Refrigeration and Air Conditioning - Vapor compression cycle, psychrometry"
+          ],
+          "keywords": ["thermodynamics", "fluid mechanics", "heat transfer", "cycles"],
+          "scheme": "2021"
+        }
+      }
+    }
+  }
+}
