@@ -655,7 +655,6 @@ This project is licensed under the **MIT License** — see [LICENSE](LICENSE) fo
 - ✅ **Security First** — Server-side API handling with encrypted data storage
 
 ### **🚀 Innovation Highlights**
-- **First-of-its-kind** university-specific RAG implementation for VTU
 - **Novel hybrid approach** combining deterministic ML with generative AI
 - **Production-grade performance** exceeding industry standards across all metrics
 - **Comprehensive academic coverage** spanning 3 engineering branches and 57 subjects
