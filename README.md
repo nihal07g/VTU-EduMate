@@ -22,7 +22,7 @@
 
 Unlike traditional chatbots, VTU EduMate employs a **novel hybrid approach** that combines:
 - **Production-ready RAG pipeline** with semantic document search and citation attribution  
-- **4 specialized ML processors** (Random Forest, SVM, TF-IDF, Content-Based Filtering) achieving 92.4% accuracy
+- **4 specialized ML processors** (Random Forest, SVM, TF-IDF, Content-Based Filtering) achieving 92.4% accuracy ,Hybrid Heuristic–LLM system: deterministic syllabus heuristics accuracy
 - **Custom GPT integration** with domain-specific prompt engineering for VTU's 2022 curriculum
 - **Multi-driver vector database** support (JSON/FAISS/ChromaDB) for scalable deployment scenarios
 
