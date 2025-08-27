@@ -74,8 +74,8 @@ graph TB
     end
     
     subgraph "External AI Services"
-        P[Gemini 2.0 Flash API]
-        Q[Gemini text-embedding-004]
+        P[LLM API]
+        Q[LLM text-embedding-004]
         R[Fallback Models]
     end
     
@@ -121,8 +121,8 @@ graph TB
 - **Environment-based Configuration** — Secure secrets management across deployment stages
 
 #### **AI & Machine Learning Core**
-- **Gemini 2.0 Flash** — State-of-the-art language model with custom prompt engineering
-- **Gemini text-embedding-004** — Advanced semantic embeddings for vector search
+- **LLM (Gemini)** — State-of-the-art language model with custom prompt engineering
+- **LLM text-embedding-004** — Advanced semantic embeddings for vector search
 - **Python ML Stack** — scikit-learn, pandas, NumPy for mathematical computations
 - **4 Specialized Processors** — Multi-algorithm ensemble for enhanced accuracy
 
@@ -235,6 +235,7 @@ const result = await response.json();
 - **BIS613D** — Cloud Computing & Security (PE, ISE, 6th Sem) — *AWS, Azure, security protocols*
 - **DSA Unit 3** — Data Structures & Algorithms — *Advanced trees, graphs, sorting algorithms*
 - **OS Unit 2** — Operating Systems — *Process management, scheduling, synchronization*
+and Other
 
 ---
 
