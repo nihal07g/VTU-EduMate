@@ -4,35 +4,35 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
-    --primary: 221.2 83.2% 53.3%;
-    --primary-foreground: 210 40% 98%;
-    --secondary: 210 40% 96%;
-    --secondary-foreground: 222.2 84% 4.9%;
-    --muted: 210 40% 96%;
-    --muted-foreground: 215.4 16.3% 46.9%;
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 221.2 83.2% 53.3%;
+    --background: 229 61% 6.5%;
+    --foreground: 210 40% 96%;
+    --card: 228 41% 9%;
+    --card-foreground: 210 40% 96%;
+    --primary: 217.2 91.2% 59.8%;
+    --primary-foreground: 222.2 84% 4.9%;
+    --secondary: 222 40% 14%;
+    --secondary-foreground: 210 40% 96%;
+    --muted: 222 33% 18%;
+    --muted-foreground: 215 20.2% 68%;
+    --border: 223 35% 22%;
+    --input: 223 35% 20%;
+    --ring: 217.2 91.2% 59.8%;
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
+    --background: 229 61% 6.5%;
+    --foreground: 210 40% 96%;
+    --card: 228 41% 9%;
+    --card-foreground: 210 40% 96%;
     --primary: 217.2 91.2% 59.8%;
     --primary-foreground: 222.2 84% 4.9%;
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 224.3 76.3% 94.1%;
+    --secondary: 222 40% 14%;
+    --secondary-foreground: 210 40% 96%;
+    --muted: 222 33% 18%;
+    --muted-foreground: 215 20.2% 68%;
+    --border: 223 35% 22%;
+    --input: 223 35% 20%;
+    --ring: 217.2 91.2% 59.8%;
   }
 }
 
@@ -214,7 +214,7 @@ button:focus {
 
 @supports not (backdrop-filter: blur(12px)) {
   .backdrop-blur-support {
-    background: rgba(255, 255, 255, 0.95);
+    background: rgba(15, 23, 42, 0.95);
   }
   
   .dark .backdrop-blur-support {
