@@ -328,11 +328,11 @@ export default function VTUEduMate() {
                     disabled={!scheme || !semester || !branch || availableSubjects.length === 0}
                     className="w-full px-4 py-3 rounded-xl border-2 border-gray-600 bg-gray-700 text-gray-100 font-medium text-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200 cursor-pointer hover:border-gray-500 disabled:opacity-50 disabled:cursor-not-allowed"
                   >
-                    <option value="">
+                    <option value="" className="bg-gray-700 text-gray-100">
                       {availableSubjects.length === 0 ? 'No subjects available' : 'Select Subject'}
                     </option>
                     {availableSubjects.map(subject => (
-                      <option key={subject.code} value={subject.code}>
+                      <option key={subject.code} value={subject.code} className="bg-gray-700 text-gray-100">
                         {subject.code} - {subject.name}
                       </option>
                     ))}
@@ -341,7 +341,7 @@ export default function VTUEduMate() {
 
                 {/* Subject Info */}
                 {selectedSubjectData && (
-                  <div className="p-3 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20 rounded-xl border border-blue-200/50 dark:border-blue-700/50">
+                  <div className="p-3 bg-gradient-to-r from-blue-900/20 to-indigo-900/20 rounded-xl border border-blue-700/50">
                     <h4 className="font-semibold text-blue-800 dark:text-blue-200 text-sm mb-1">
                       {selectedSubjectData.name}
                     </h4>
@@ -410,17 +410,17 @@ export default function VTUEduMate() {
 
               {/* Loading Animation */}
               {loading && !answer && (
-                <div className="flex flex-col items-center justify-center gap-4 rounded-xl p-8 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20">
+                <div className="flex flex-col items-center justify-center gap-4 rounded-xl p-8 bg-gradient-to-r from-blue-900/20 to-indigo-900/20">
                   <div className="flex items-center gap-3">
                     <svg className="animate-spin h-8 w-8 text-blue-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
                       <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
                       <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
                     </svg>
-                    <div className="font-semibold text-blue-600 dark:text-blue-400">
+                    <div className="font-semibold text-blue-400">
                       AI Processing...
                     </div>
                   </div>
-                  <div className="text-center text-gray-600 dark:text-gray-400 text-sm">
+                  <div className="text-center text-gray-400 text-sm">
                     <p>Analyzing with ML models</p>
                     <p>Generating VTU-optimized response</p>
                   </div>
