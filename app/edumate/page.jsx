@@ -380,7 +380,7 @@ export default function VTUEduMate() {
 
                 {/* Error Display */}
                 {error && (
-                  <div className="mt-3 p-3 bg-red-50 dark:bg-red-900/30 text-red-700 dark:text-red-300 rounded-xl text-sm">
+                  <div className="mt-3 p-3 bg-red-900/30 text-red-300 rounded-xl text-sm">
                     ⚠️ {error}
                   </div>
                 )}
@@ -477,7 +477,7 @@ export default function VTUEduMate() {
             {mlAnalysis && (
               <div className="space-y-4">
                 {/* ML Analysis */}
-                <div className="bg-white/70 dark:bg-gray-800/70 backdrop-blur-xl rounded-2xl border border-gray-200/50 dark:border-gray-700/50 p-5">
+                <div className="bg-gray-800 rounded-2xl border border-gray-700 shadow-lg p-5">
                   <div className="flex items-center gap-2 mb-4">
                     <div className="w-8 h-8 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center">
                       <span className="text-white text-sm font-bold">🧠</span>

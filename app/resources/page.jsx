@@ -193,7 +193,7 @@ export default function VTUResourcesPage() {
                   <select
                     value={scheme}
                     onChange={(e) => setScheme(e.target.value)}
-                    className="w-full mt-2 px-4 py-3 rounded-xl border border-gray-200 dark:border-gray-600 bg-white dark:bg-gray-700 focus:ring-2 focus:ring-green-500/20 focus:border-green-500"
+                    className="w-full mt-2 px-4 py-3 rounded-xl border border-gray-600 bg-gray-700 text-gray-100 focus:ring-2 focus:ring-green-500/20 focus:border-green-500"
                   >
                     <option value="">All Schemes</option>
                     {schemeOptions.map(option => (
@@ -207,7 +207,7 @@ export default function VTUResourcesPage() {
                   <select
                     value={semester}
                     onChange={(e) => setSemester(e.target.value)}
-                    className="w-full mt-2 px-4 py-3 rounded-xl border border-gray-200 dark:border-gray-600 bg-white dark:bg-gray-700 focus:ring-2 focus:ring-green-500/20 focus:border-green-500"
+                    className="w-full mt-2 px-4 py-3 rounded-xl border border-gray-600 bg-gray-700 text-gray-100 focus:ring-2 focus:ring-green-500/20 focus:border-green-500"
                   >
                     <option value="">All Semesters</option>
                     {semesterOptions.map(option => (
@@ -221,7 +221,7 @@ export default function VTUResourcesPage() {
                   <select
                     value={branch}
                     onChange={(e) => setBranch(e.target.value)}
-                    className="w-full mt-2 px-4 py-3 rounded-xl border border-gray-200 dark:border-gray-600 bg-white dark:bg-gray-700 focus:ring-2 focus:ring-green-500/20 focus:border-green-500"
+                    className="w-full mt-2 px-4 py-3 rounded-xl border border-gray-600 bg-gray-700 text-gray-100 focus:ring-2 focus:ring-green-500/20 focus:border-green-500"
                   >
                     <option value="">All Branches</option>
                     {branchOptions.map(option => (
@@ -249,7 +249,7 @@ export default function VTUResourcesPage() {
             ) : resources.length > 0 ? (
               <div className="space-y-6">
                 {resources.map((resource) => (
-                  <div key={resource._id} className="bg-white dark:bg-gray-800/80 p-6 rounded-2xl shadow-lg border border-gray-200 dark:border-gray-700/50 flex items-center justify-between backdrop-blur-sm">
+                  <div key={resource._id} className="bg-gray-800 p-6 rounded-2xl shadow-lg border border-gray-700 flex items-center justify-between"
                       <div className="flex-grow">
                           <div className="flex items-center gap-4">
                               <div className="flex-shrink-0 flex items-center justify-center w-12 h-12 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-lg">
@@ -271,9 +271,9 @@ export default function VTUResourcesPage() {
                           </div>
                           
                           <div className="text-sm text-gray-500 dark:text-gray-400 mt-4 flex flex-wrap items-center gap-x-4 gap-y-2">
-                              <span className="font-semibold bg-gray-100 dark:bg-gray-700 px-2 py-1 rounded">📚 {resource.scheme} Scheme</span>
-                              <span className="font-semibold bg-gray-100 dark:bg-gray-700 px-2 py-1 rounded">🎓 Semester {resource.semester}</span>
-                              <span className="font-semibold bg-gray-100 dark:bg-gray-700 px-2 py-1 rounded">⚙️ {resource.branch}</span>
+                              <span className="font-semibold bg-gray-700 text-gray-200 px-2 py-1 rounded">📚 {resource.scheme} Scheme</span>
+                              <span className="font-semibold bg-gray-700 text-gray-200 px-2 py-1 rounded">🎓 Semester {resource.semester}</span>
+                              <span className="font-semibold bg-gray-700 text-gray-200 px-2 py-1 rounded">⚙️ {resource.branch}</span>
                               <span>📁 {(resource.fileSize / 1024 / 1024).toFixed(1)} MB</span>
                               <span>⬇️ {resource.downloadCount} downloads</span>
                               <span>📅 {new Date(resource.uploadDate).toLocaleDateString()}</span>
@@ -321,7 +321,7 @@ export default function VTUResourcesPage() {
                 ))}
               </div>
             ) : (
-              <div className="text-center py-20 bg-gray-100 dark:bg-gray-800 rounded-lg">
+              <div className="text-center py-20 bg-gray-800 rounded-lg">
                 <p className="text-4xl">📚</p>
                 <p className="text-xl font-semibold mt-4">No Study Materials Found</p>
                 <p className="text-gray-500 dark:text-gray-400 mt-2">
