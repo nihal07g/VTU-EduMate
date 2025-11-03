@@ -13,7 +13,7 @@ export function ModeSelector() {
   const inactiveClasses = "bg-transparent text-gray-600 dark:text-gray-400 hover:bg-white/50 dark:hover:bg-gray-800/50";
 
   return (
-    <div className="max-w-md mx-auto my-8 p-2 bg-gray-100 dark:bg-gray-800/60 rounded-xl flex items-center space-x-2 border border-gray-200 dark:border-gray-700">
+    <div className="max-w-md mx-auto my-8 p-2 bg-gray-100 dark:bg-gray-800 rounded-xl flex items-center space-x-2 border border-gray-200 dark:border-gray-700">
         <Link href="/edumate" className={`${baseClasses} ${currentMode === 'edumate' ? activeClasses : inactiveClasses}`}>
             <div>
               <div className="flex justify-center mb-1">
