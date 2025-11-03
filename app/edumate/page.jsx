@@ -185,7 +185,7 @@ export default function VTUEduMate() {
 
   if (!mounted) {
     return (
-      <div className="flex items-center justify-center min-h-screen bg-gradient-to-br from-blue-50 via-white to-indigo-50 dark:from-gray-950 dark:via-gray-900 dark:to-gray-950">
+      <div className="flex items-center justify-center min-h-screen bg-gray-950">
         <div className="text-center">
           <div className="w-16 h-16 mx-auto mb-4 rounded-full overflow-hidden shadow-lg animate-pulse">
             <Image 
@@ -205,9 +205,9 @@ export default function VTUEduMate() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-indigo-50 dark:from-gray-950 dark:via-gray-900 dark:to-gray-950 text-gray-900 dark:text-gray-100">
+    <div className="min-h-screen bg-gray-950 text-gray-100">
       {/* Fixed Header */}
-      <header className="sticky top-0 z-50 w-full bg-white/80 dark:bg-gray-900/95 backdrop-blur-xl border-b border-gray-200/50 dark:border-gray-700/50">
+      <header className="sticky top-0 z-50 w-full bg-gray-900/95 backdrop-blur-xl border-b border-gray-700/50">
         <div className="max-w-7xl mx-auto px-6 flex items-center justify-between h-16">
           <div className="flex items-center space-x-3">
             <div className="flex items-center justify-center w-10 h-10 rounded-full overflow-hidden shadow-lg">
@@ -251,28 +251,28 @@ export default function VTUEduMate() {
           
           {/* Left Sidebar - Course Selection */}
           <div className="col-span-12 lg:col-span-3">
-            <div className="bg-white/70 dark:bg-gray-800/70 backdrop-blur-xl rounded-2xl border border-gray-200/50 dark:border-gray-700/50 p-5 sticky top-24">
-              <div className="flex items-center gap-2 mb-5">
-                <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-lg flex items-center justify-center">
-                  <span className="text-white text-sm font-bold">📚</span>
+            <div className="bg-gray-800 rounded-2xl border border-gray-700 shadow-lg p-6 sticky top-24">
+              <div className="flex items-center gap-3 mb-6 pb-4 border-b border-gray-700">
+                <div className="w-10 h-10 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-xl flex items-center justify-center shadow-md">
+                  <span className="text-white text-lg">📚</span>
                 </div>
-                <h3 className="text-lg font-bold">Course Selection</h3>
+                <h3 className="text-lg font-bold text-white">Course Selection</h3>
               </div>
 
               <div className="space-y-4">
                 {/* Scheme Selection */}
-                <div className="space-y-2">
-                  <label className="block text-sm font-semibold text-gray-700 dark:text-gray-300">
+                <div className="space-y-5">
+                  <label className="block text-sm font-bold text-gray-200">
                     VTU Scheme
                   </label>
                   <select
                     value={scheme}
                     onChange={(e) => setScheme(e.target.value)}
-                    className="w-full px-3 py-2.5 rounded-xl border border-gray-200 dark:border-gray-600 bg-white dark:bg-gray-700 text-sm focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500"
+                    className="w-full px-4 py-3 rounded-xl border-2 border-gray-600 bg-gray-700 text-gray-100 font-medium text-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200 cursor-pointer hover:border-gray-500"
                   >
-                    <option value="">Select Scheme</option>
+                    <option value="" className="bg-gray-700 text-gray-100">Select Scheme</option>
                     {schemeOptions.map(option => (
-                      <option key={option.value} value={option.value}>
+                      <option key={option.value} value={option.value} className="bg-gray-700 text-gray-100">
                         {option.label}
                       </option>
                     ))}
@@ -281,18 +281,18 @@ export default function VTUEduMate() {
 
                 {/* Branch Selection */}
                 <div className="space-y-2">
-                  <label className="block text-sm font-semibold text-gray-700 dark:text-gray-300">
+                  <label className="block text-sm font-bold text-gray-200">
                     Branch
                   </label>
                   <select
                     value={branch}
                     onChange={(e) => setBranch(e.target.value)}
                     disabled={!scheme}
-                    className="w-full px-3 py-2.5 rounded-xl border border-gray-200 dark:border-gray-600 bg-white dark:bg-gray-700 text-sm focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 disabled:opacity-50"
+                    className="w-full px-4 py-3 rounded-xl border-2 border-gray-600 bg-gray-700 text-gray-100 font-medium text-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200 cursor-pointer hover:border-gray-500 disabled:opacity-50 disabled:cursor-not-allowed"
                   >
-                    <option value="">Select Branch</option>
+                    <option value="" className="bg-gray-700 text-gray-100">Select Branch</option>
                     {availableBranches.map(branchCode => (
-                      <option key={branchCode} value={branchCode}>
+                      <option key={branchCode} value={branchCode} className="bg-gray-700 text-gray-100">
                         {branchCode} - {getBranchFullName(branchCode, scheme)}
                       </option>
                     ))}
@@ -301,32 +301,32 @@ export default function VTUEduMate() {
 
                 {/* Semester Selection */}
                 <div className="space-y-2">
-                  <label className="block text-sm font-semibold text-gray-700 dark:text-gray-300">
+                  <label className="block text-sm font-bold text-gray-200">
                     Semester
                   </label>
                   <select
                     value={semester}
                     onChange={(e) => setSemester(e.target.value)}
                     disabled={!scheme || !branch}
-                    className="w-full px-3 py-2.5 rounded-xl border border-gray-200 dark:border-gray-600 bg-white dark:bg-gray-700 text-sm focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 disabled:opacity-50"
+                    className="w-full px-4 py-3 rounded-xl border-2 border-gray-600 bg-gray-700 text-gray-100 font-medium text-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200 cursor-pointer hover:border-gray-500 disabled:opacity-50 disabled:cursor-not-allowed"
                   >
-                    <option value="">Select Semester</option>
+                    <option value="" className="bg-gray-700 text-gray-100">Select Semester</option>
                     {availableSemesters.map(sem => (
-                      <option key={sem} value={sem}>Semester {sem}</option>
+                      <option key={sem} value={sem} className="bg-gray-700 text-gray-100">Semester {sem}</option>
                     ))}
                   </select>
                 </div>
 
                 {/* Subject Selection */}
                 <div className="space-y-2">
-                  <label className="block text-sm font-semibold text-gray-700 dark:text-gray-300">
+                  <label className="block text-sm font-bold text-gray-200">
                     Subject
                   </label>
                   <select
                     value={selectedSubject}
                     onChange={(e) => setSelectedSubject(e.target.value)}
                     disabled={!scheme || !semester || !branch || availableSubjects.length === 0}
-                    className="w-full px-3 py-2.5 rounded-xl border border-gray-200 dark:border-gray-600 bg-white dark:bg-gray-700 text-sm focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 disabled:opacity-50"
+                    className="w-full px-4 py-3 rounded-xl border-2 border-gray-600 bg-gray-700 text-gray-100 font-medium text-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200 cursor-pointer hover:border-gray-500 disabled:opacity-50 disabled:cursor-not-allowed"
                   >
                     <option value="">
                       {availableSubjects.length === 0 ? 'No subjects available' : 'Select Subject'}
@@ -356,15 +356,15 @@ export default function VTUEduMate() {
 
           {/* Center - Question Input & Answer */}
           <div className="col-span-12 lg:col-span-6">
-            <div className="bg-white/70 dark:bg-gray-800/70 backdrop-blur-xl rounded-2xl border border-gray-200/50 dark:border-gray-700/50 p-6">
+            <div className="bg-gray-800 rounded-2xl border border-gray-700 shadow-lg p-6">
               
               {/* Question Input */}
               <div className="mb-6">
-                <div className="flex items-center gap-2 mb-4">
-                  <div className="w-8 h-8 bg-gradient-to-r from-green-500 to-emerald-500 rounded-lg flex items-center justify-center">
-                    <span className="text-white text-sm font-bold">🤖</span>
+                <div className="flex items-center gap-3 mb-4 pb-4 border-b border-gray-700">
+                  <div className="w-10 h-10 bg-gradient-to-r from-green-500 to-emerald-500 rounded-xl flex items-center justify-center shadow-md">
+                    <span className="text-white text-lg">🤖</span>
                   </div>
-                  <h3 className="text-lg font-bold">Ask Your Question</h3>
+                  <h3 className="text-lg font-bold text-white">Ask Your Question</h3>
                 </div>
 
                 <textarea
@@ -374,7 +374,7 @@ export default function VTUEduMate() {
                     `Ask about ${selectedSubjectData.name}. AI will analyze with ML models for VTU ${scheme} scheme...` :
                     "Select course details first to enable AI-powered question processing..."
                   }
-                  className="w-full px-4 py-4 rounded-xl border border-gray-200 dark:border-gray-600 bg-white dark:bg-gray-700 text-sm focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 resize-none"
+                  className="w-full px-4 py-4 rounded-xl border-2 border-gray-600 bg-gray-700 text-gray-100 placeholder:text-gray-400 font-medium text-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500 resize-none transition-all duration-200 hover:border-gray-500"
                   rows={6}
                 />
 
@@ -513,7 +513,7 @@ export default function VTUEduMate() {
 
                 {/* Video Recommendations */}
                 {videoRecommendations.length > 0 && (
-                  <div className="bg-white/70 dark:bg-gray-800/70 backdrop-blur-xl rounded-2xl border border-gray-200/50 dark:border-gray-700/50 p-5">
+                  <div className="bg-gray-800 rounded-2xl border border-gray-700 shadow-lg p-5">
                     <div className="flex items-center gap-2 mb-4">
                       <div className="w-8 h-8 bg-gradient-to-r from-red-500 to-orange-500 rounded-lg flex items-center justify-center">
                         <span className="text-white text-sm font-bold">🎥</span>
@@ -528,7 +528,7 @@ export default function VTUEduMate() {
                           href={video.url}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="block p-3 bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 hover:shadow-md transition-all duration-200 group"
+                          className="block p-3 bg-gray-800 rounded-xl border border-gray-700 hover:shadow-md transition-all duration-200 group"
                         >
                           <h5 className="font-semibold text-sm text-gray-800 dark:text-gray-200 group-hover:text-blue-600 dark:group-hover:text-blue-400 line-clamp-2 mb-2">
                             {video.title}
